@@ -1,0 +1,33 @@
+{
+  "name": "xray",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec tsx index.ts",
+    "extract:graphql": "tsx src/graphql-resolvers/index.ts",
+    "extract:exit-points": "tsx src/exit-points/index.ts",
+    "trace:flows": "tsx src/flow-tracer/index.ts",
+    "trace:resolver-flow": "tsx src/resolver-flow/index.ts",
+    "map:resolvers": "tsx src/resolver-map/index.ts",
+    "web": "python3 serve-docs-advanced.py",
+    "mcp": "tsx src/mcp/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "glob": "^13.0.6",
+    "ts-morph": "^27.0.2",
+    "zod": "^3.23.8"
+  }
+}
