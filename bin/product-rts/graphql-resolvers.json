@@ -1,0 +1,335 @@
+{
+  "resolvers": [
+    {
+      "name": "products",
+      "parentType": "ChartElement",
+      "params": [],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 548,
+      "column": 15769
+    },
+    {
+      "name": "productList",
+      "parentType": "ChartElement",
+      "params": [
+        {
+          "name": "{ basicInfo, ...restParentData }",
+          "type": "ChartElement"
+        },
+        {
+          "name": "args",
+          "type": "{\n        segmentId?: string;\n        filter?: boolean;\n        withAttributes?: boolean;\n      }"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 549,
+      "column": 15796
+    },
+    {
+      "name": "productListById",
+      "parentType": "ChartElement",
+      "params": [],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 561,
+      "column": 16164
+    },
+    {
+      "name": "productList",
+      "parentType": "ChartElementProductList",
+      "params": [
+        {
+          "name": "parent",
+          "type": "{\n        nonUiRequiredFields?: NonUiRequiredFields;\n        productListId?: string;\n        withAttributes?: boolean;\n      }"
+        },
+        {
+          "name": "_args",
+          "type": "Record<string, never>"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 564,
+      "column": 16261
+    },
+    {
+      "name": "verticalProducts",
+      "parentType": "Query",
+      "params": [
+        {
+          "name": "_parent",
+          "type": "unknown"
+        },
+        {
+          "name": "args",
+          "type": "{\n        verticalId?: string;\n        productFeatureIds?: Record<string, PrimitiveOrArray>;\n        withPhoneWorkingHours?: boolean;\n      }"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 594,
+      "column": 17270
+    },
+    {
+      "name": "affiliateLinks",
+      "parentType": "Query",
+      "params": [],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 616,
+      "column": 18073
+    },
+    {
+      "name": "relatedProducts",
+      "parentType": "Query",
+      "params": [],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 620,
+      "column": 18158
+    },
+    {
+      "name": "products",
+      "parentType": "Query",
+      "params": [],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 621,
+      "column": 18179
+    },
+    {
+      "name": "productById",
+      "parentType": "Query",
+      "params": [
+        {
+          "name": "parent",
+          "type": "{ productId?: string }"
+        },
+        {
+          "name": "args",
+          "type": "{\n    productId?: string;\n    withFeatureTypes?: string[];\n    withChartScore?: boolean;\n    skipAffLinks?: boolean;\n    scoreSegmentId?: string;\n  }"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 356,
+      "column": 10551
+    },
+    {
+      "name": "productList",
+      "parentType": "Query",
+      "params": [],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 630,
+      "column": 18325
+    },
+    {
+      "name": "productListById",
+      "parentType": "Query",
+      "params": [
+        {
+          "name": "_parent",
+          "type": "unknown"
+        },
+        {
+          "name": "args",
+          "type": "{\n        id?: string;\n        withAttributes?: boolean;\n        productFeatures?: Record<string, PrimitiveOrArray>;\n      }"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 634,
+      "column": 18418
+    },
+    {
+      "name": "minimalProductListWithFeatures",
+      "parentType": "Query",
+      "params": [
+        {
+          "name": "parent",
+          "type": "unknown"
+        },
+        {
+          "name": "args",
+          "type": "{\n        id?: string;\n        productFeatureIds?: string[];\n      }"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 650,
+      "column": 19144
+    },
+    {
+      "name": "productWithQuote",
+      "parentType": "Query",
+      "params": [],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 658,
+      "column": 19358
+    },
+    {
+      "name": "stripePayment",
+      "parentType": "Query",
+      "params": [],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 659,
+      "column": 19380
+    },
+    {
+      "name": "hasMakeWebHook",
+      "parentType": "Product",
+      "params": [
+        {
+          "name": "parent",
+          "type": "Product"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 794,
+      "column": 23475
+    },
+    {
+      "name": "workingHoursPhoneNumberAttribute",
+      "parentType": "Product",
+      "params": [
+        {
+          "name": "parent",
+          "type": "Product"
+        },
+        {
+          "name": "_args",
+          "type": "unknown"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 795,
+      "column": 23584
+    },
+    {
+      "name": "isInWorkingHours",
+      "parentType": "Product",
+      "params": [
+        {
+          "name": "parent",
+          "type": "any"
+        },
+        {
+          "name": "_args",
+          "type": "any"
+        },
+        {
+          "name": "context",
+          "type": "any"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 802,
+      "column": 23922
+    },
+    {
+      "name": "leadSendAvailable",
+      "parentType": "Product",
+      "params": [
+        {
+          "name": "parent",
+          "type": "Product"
+        },
+        {
+          "name": "_args",
+          "type": "unknown"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 806,
+      "column": 24082
+    },
+    {
+      "name": "promotionPackage",
+      "parentType": "Product",
+      "params": [
+        {
+          "name": "parent",
+          "type": "Product"
+        },
+        {
+          "name": "_args",
+          "type": "unknown"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 844,
+      "column": 25378
+    },
+    {
+      "name": "product",
+      "parentType": "QuestionnaireResult",
+      "params": [
+        {
+          "name": "parent",
+          "type": "QuestionnaireResult"
+        },
+        {
+          "name": "args",
+          "type": "{ withPhoneWorkingHours?: boolean }"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 861,
+      "column": 25829
+    },
+    {
+      "name": "getProductsByProductConsent",
+      "parentType": "QuestionnaireStep",
+      "params": [
+        {
+          "name": "parent",
+          "type": "QuestionnaireStep"
+        },
+        {
+          "name": "args",
+          "type": "{ withPhoneWorkingHours?: boolean }"
+        },
+        {
+          "name": "context",
+          "type": "ServiceContext"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+      "line": 894,
+      "column": 26859
+    }
+  ],
+  "generatedAt": "2026-04-08T11:21:44.346Z",
+  "resolverFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts"
+}

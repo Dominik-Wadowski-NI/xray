@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-04-08T13:19:29.392Z",
+  "resolversCount": 1,
+  "resolvers": [
+    {
+      "generatedAt": "2026-04-08T13:19:29.249Z",
+      "resolver": {
+        "name": "promotionPackage",
+        "parentType": "Product",
+        "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+        "line": 844
+      },
+      "summary": {
+        "functions": 1,
+        "externalPackages": 2,
+        "apiRequests": 0,
+        "databaseCalls": 0,
+        "classInstantiations": 0
+      },
+      "functions": [
+        {
+          "order": 0,
+          "name": "getProductPromotionPackageAeIdByProduct",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 346,
+          "lineEnd": 372,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+            "line": 845
+          }
+        }
+      ],
+      "externalPackages": [
+        {
+          "order": 1,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "getProductPromotionPackageManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 358,
+          "snippet": "manipulatorHelper.getProductPromotionPackageManipulation(\n    contextId,\n    productId,\n    produ..."
+        },
+        {
+          "order": 2,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "markManipulationAsUsed",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 368,
+          "snippet": "manipulatorHelper.markManipulationAsUsed(productPromotionPackageManipulation)"
+        }
+      ],
+      "apiRequests": [],
+      "databaseCalls": [],
+      "classInstantiations": []
+    }
+  ]
+}

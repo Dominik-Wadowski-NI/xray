@@ -1,0 +1,3649 @@
+{
+  "generatedAt": "2026-04-08T13:19:29.392Z",
+  "resolversCount": 1,
+  "resolvers": [
+    {
+      "generatedAt": "2026-04-08T13:19:29.383Z",
+      "resolver": {
+        "name": "getProductsByProductConsent",
+        "parentType": "QuestionnaireStep",
+        "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+        "line": 894
+      },
+      "summary": {
+        "functions": 189,
+        "externalPackages": 148,
+        "apiRequests": 0,
+        "databaseCalls": 16,
+        "classInstantiations": 9
+      },
+      "functions": [
+        {
+          "order": 0,
+          "name": "relatedProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+          "line": 288,
+          "lineEnd": 354,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+            "line": 912
+          }
+        },
+        {
+          "order": 2,
+          "name": "getByDirectIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 242,
+          "lineEnd": 262,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+            "line": 321
+          }
+        },
+        {
+          "order": 3,
+          "name": "getProductsByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/products-repository.ts",
+          "line": 34,
+          "lineEnd": 55,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 250
+          }
+        },
+        {
+          "order": 4,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/products-repository.ts",
+          "line": 28,
+          "lineEnd": 32,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/products-repository.ts",
+            "line": 39
+          }
+        },
+        {
+          "order": 9,
+          "name": "handleNonePlProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 118,
+          "lineEnd": 172,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 251
+          }
+        },
+        {
+          "order": 12,
+          "name": "getProductFeatureValuesByProductAndFeatureIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 200,
+          "lineEnd": 239,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 144
+          }
+        },
+        {
+          "order": 13,
+          "name": "extractRequestedGroupsVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 241,
+          "lineEnd": 256,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 207
+          }
+        },
+        {
+          "order": 14,
+          "name": "getValueGroupVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 113,
+          "lineEnd": 130,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 208
+          }
+        },
+        {
+          "order": 16,
+          "name": "getProductFeatureValueGroupsByProductFeatureIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 27,
+          "lineEnd": 54,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 119
+          }
+        },
+        {
+          "order": 17,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 21,
+          "lineEnd": 25,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+            "line": 31
+          }
+        },
+        {
+          "order": 22,
+          "name": "getProductFeatureValueGroupVariants",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 68,
+          "lineEnd": 91,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 121
+          }
+        },
+        {
+          "order": 24,
+          "name": "getRequestedProductFeatureValueGroupsVariants",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 93,
+          "lineEnd": 111,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 77
+          }
+        },
+        {
+          "order": 26,
+          "name": "getManipulatedProductFeatureGroupVariants",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 37,
+          "lineEnd": 66,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 81
+          }
+        },
+        {
+          "order": 28,
+          "name": "isManipulatedVariantGroupVariant",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 30,
+          "lineEnd": 35,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 51
+          }
+        },
+        {
+          "order": 34,
+          "name": "getProductFeatureOverrideValuesQuery",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 132,
+          "lineEnd": 168,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 216
+          }
+        },
+        {
+          "order": 35,
+          "name": "isObjectNotEmpty",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 170,
+          "lineEnd": 172,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 140
+          }
+        },
+        {
+          "order": 36,
+          "name": "isObjectNotEmpty",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 170,
+          "lineEnd": 172,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 141
+          }
+        },
+        {
+          "order": 41,
+          "name": "getProductFeatureValuesByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 67,
+          "lineEnd": 92,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 223
+          }
+        },
+        {
+          "order": 42,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 26,
+          "lineEnd": 30,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+            "line": 71
+          }
+        },
+        {
+          "order": 47,
+          "name": "getProductFeatureValuesByProductIdsAndValueGroupVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 32,
+          "lineEnd": 65,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 224
+          }
+        },
+        {
+          "order": 48,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 26,
+          "lineEnd": 30,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+            "line": 37
+          }
+        },
+        {
+          "order": 51,
+          "name": "applyProductFeatureValuesOverrides",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 176,
+          "lineEnd": 198,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 227
+          }
+        },
+        {
+          "order": 52,
+          "name": "generateOverrideMapKey",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 174,
+          "lineEnd": 174,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 187
+          }
+        },
+        {
+          "order": 53,
+          "name": "generateOverrideMapKey",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 174,
+          "lineEnd": 174,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 191
+          }
+        },
+        {
+          "order": 58,
+          "name": "resolveProductFeatureValues",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 85,
+          "lineEnd": 141,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 150
+          }
+        },
+        {
+          "order": 59,
+          "name": "extractRequestedGroupsVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 241,
+          "lineEnd": 256,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+            "line": 108
+          }
+        },
+        {
+          "order": 60,
+          "name": "getValueGroupVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 113,
+          "lineEnd": 130,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+            "line": 110
+          }
+        },
+        {
+          "order": 62,
+          "name": "getProductFeatureOverrideValuesQuery",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 132,
+          "lineEnd": 168,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+            "line": 119
+          }
+        },
+        {
+          "order": 63,
+          "name": "getProductFeatureValuesByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 67,
+          "lineEnd": 92,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+            "line": 120
+          }
+        },
+        {
+          "order": 64,
+          "name": "applyProductFeatureValuesOverrides",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 176,
+          "lineEnd": 198,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+            "line": 121
+          }
+        },
+        {
+          "order": 65,
+          "name": "assignProductFeatureValuesToProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 47,
+          "lineEnd": 74,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+            "line": 124
+          }
+        },
+        {
+          "order": 68,
+          "name": "getRequestedProductFeatureValues",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 23,
+          "lineEnd": 45,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+            "line": 65
+          }
+        },
+        {
+          "order": 71,
+          "name": "isProductInAvailablePositions",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 16,
+          "lineEnd": 21,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+            "line": 39
+          }
+        },
+        {
+          "order": 82,
+          "name": "getByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 226,
+          "lineEnd": 240,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+            "line": 337
+          }
+        },
+        {
+          "order": 83,
+          "name": "getProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 85,
+          "lineEnd": 116,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 228
+          }
+        },
+        {
+          "order": 84,
+          "name": "getResolvedProductList",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 34,
+          "lineEnd": 60,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 87
+          }
+        },
+        {
+          "order": 85,
+          "name": "getSegmentById",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/segments-repository.ts",
+          "line": 25,
+          "lineEnd": 30,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 40
+          }
+        },
+        {
+          "order": 86,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/segments-repository.ts",
+          "line": 19,
+          "lineEnd": 23,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/segments-repository.ts",
+            "line": 26
+          }
+        },
+        {
+          "order": 89,
+          "name": "resolveProductList",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 473,
+          "lineEnd": 592,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 47
+          }
+        },
+        {
+          "order": 91,
+          "name": "getProductListComposition",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 325,
+          "lineEnd": 351,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 480
+          }
+        },
+        {
+          "order": 92,
+          "name": "getProductListCompositionById",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+          "line": 50,
+          "lineEnd": 59,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 335
+          }
+        },
+        {
+          "order": 93,
+          "name": "getVariantById",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+          "line": 34,
+          "lineEnd": 41,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+            "line": 55
+          }
+        },
+        {
+          "order": 94,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+          "line": 28,
+          "lineEnd": 32,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+            "line": 35
+          }
+        },
+        {
+          "order": 97,
+          "name": "getById",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+          "line": 43,
+          "lineEnd": 48,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+            "line": 58
+          }
+        },
+        {
+          "order": 98,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+          "line": 28,
+          "lineEnd": 32,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+            "line": 44
+          }
+        },
+        {
+          "order": 101,
+          "name": "getProductListCompositionById",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+          "line": 50,
+          "lineEnd": 59,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 350
+          }
+        },
+        {
+          "order": 103,
+          "name": "resolveProductListSubLists",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 727,
+          "lineEnd": 785,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 501
+          }
+        },
+        {
+          "order": 104,
+          "name": "__resolveVendorProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 891,
+          "lineEnd": 916,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 752
+          }
+        },
+        {
+          "order": 105,
+          "name": "_getProductListEntities",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 172,
+          "lineEnd": 204,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 902
+          }
+        },
+        {
+          "order": 106,
+          "name": "_getEntityIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 97,
+          "lineEnd": 113,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 173
+          }
+        },
+        {
+          "order": 107,
+          "name": "_extractEntityIdsFromOptions",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 88,
+          "lineEnd": 95,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 99
+          }
+        },
+        {
+          "order": 108,
+          "name": "_extractEntityIdsFromNode",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 70,
+          "lineEnd": 86,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 100
+          }
+        },
+        {
+          "order": 109,
+          "name": "_extractProductFeatureIdsFromNode",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 45,
+          "lineEnd": 68,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 72
+          }
+        },
+        {
+          "order": 112,
+          "name": "_fetchProductsByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 123,
+          "lineEnd": 137,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 174
+          }
+        },
+        {
+          "order": 113,
+          "name": "getProductsByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/products-repository.ts",
+          "line": 34,
+          "lineEnd": 55,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 124
+          }
+        },
+        {
+          "order": 114,
+          "name": "resolveMasterProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/master-product-resolver.ts",
+          "line": 6,
+          "lineEnd": 26,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 175
+          }
+        },
+        {
+          "order": 116,
+          "name": "getMasterProductsByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/master-products-repository.ts",
+          "line": 26,
+          "lineEnd": 57,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/master-product-resolver.ts",
+            "line": 13
+          }
+        },
+        {
+          "order": 117,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/master-products-repository.ts",
+          "line": 22,
+          "lineEnd": 24,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/master-products-repository.ts",
+            "line": 31
+          }
+        },
+        {
+          "order": 125,
+          "name": "extractProductsByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 139,
+          "lineEnd": 170,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 183
+          }
+        },
+        {
+          "order": 128,
+          "name": "getProductFeatureValues",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 262,
+          "lineEnd": 291,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 188
+          }
+        },
+        {
+          "order": 129,
+          "name": "extractRequestedGroupsVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 241,
+          "lineEnd": 256,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 269
+          }
+        },
+        {
+          "order": 130,
+          "name": "getValueGroupVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 113,
+          "lineEnd": 130,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 270
+          }
+        },
+        {
+          "order": 132,
+          "name": "getProductFeatureValuesByProductIdsAndValueGroupVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 32,
+          "lineEnd": 65,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 273
+          }
+        },
+        {
+          "order": 135,
+          "name": "getProductFeaturesById",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-service.ts",
+          "line": 5,
+          "lineEnd": 9,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 189
+          }
+        },
+        {
+          "order": 136,
+          "name": "getProductFeatureByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-repository.ts",
+          "line": 24,
+          "lineEnd": 50,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-service.ts",
+            "line": 6
+          }
+        },
+        {
+          "order": 137,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-repository.ts",
+          "line": 20,
+          "lineEnd": 22,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-repository.ts",
+            "line": 29
+          }
+        },
+        {
+          "order": 145,
+          "name": "getGroupedProductFeaturesValues",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 160,
+          "lineEnd": 184,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 193
+          }
+        },
+        {
+          "order": 149,
+          "name": "getNonStaticProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1020,
+          "lineEnd": 1024,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 904
+          }
+        },
+        {
+          "order": 150,
+          "name": "extractVendorProductEntityIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1026,
+          "lineEnd": 1039,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 1021
+          }
+        },
+        {
+          "order": 151,
+          "name": "isNodeTypeVendor",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1011,
+          "lineEnd": 1013,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 1028
+          }
+        },
+        {
+          "order": 154,
+          "name": "extractVendorProductEntityIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1026,
+          "lineEnd": 1039,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 1035
+          }
+        },
+        {
+          "order": 155,
+          "name": "_getProductsFromVendorServices",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 206,
+          "lineEnd": 307,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 906
+          }
+        },
+        {
+          "order": 156,
+          "name": "vendorsFeatureToggle",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1015,
+          "lineEnd": 1018,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 214
+          }
+        },
+        {
+          "order": 159,
+          "name": "getIsUpdateQuoteFlowActivated",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 997,
+          "lineEnd": 1000,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 219
+          }
+        },
+        {
+          "order": 162,
+          "name": "getIsInternalMAFlowActivated",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 987,
+          "lineEnd": 990,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 242
+          }
+        },
+        {
+          "order": 165,
+          "name": "getIsEvenActivated",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1002,
+          "lineEnd": 1005,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 243
+          }
+        },
+        {
+          "order": 168,
+          "name": "filterInternalFlowVendorProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 920,
+          "lineEnd": 985,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 244
+          }
+        },
+        {
+          "order": 173,
+          "name": "getPublishedConfigsByProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/integration-config.service.ts",
+          "line": 72,
+          "lineEnd": 99,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 263
+          }
+        },
+        {
+          "order": 174,
+          "name": "getPublishedConfig",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/integration-config.service.ts",
+          "line": 24,
+          "lineEnd": 60,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/integration-config.service.ts",
+            "line": 88
+          }
+        },
+        {
+          "order": 176,
+          "name": "getPublishedConfigsByContext",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/integration-config-repository.ts",
+          "line": 49,
+          "lineEnd": 63,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/integration-config.service.ts",
+            "line": 37
+          }
+        },
+        {
+          "order": 177,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/integration-config-repository.ts",
+          "line": 37,
+          "lineEnd": 40,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/integration-config-repository.ts",
+            "line": 54
+          }
+        },
+        {
+          "order": 186,
+          "name": "resolveWaterFallSublists",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 847,
+          "lineEnd": 889,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 765
+          }
+        },
+        {
+          "order": 187,
+          "name": "__resolveVendorProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 891,
+          "lineEnd": 916,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 869
+          }
+        },
+        {
+          "order": 188,
+          "name": "__mergeWaterFallWithNonWaterFallResults",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 787,
+          "lineEnd": 837,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 779
+          }
+        },
+        {
+          "order": 189,
+          "name": "_getProductListEntities",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 172,
+          "lineEnd": 204,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 509
+          }
+        },
+        {
+          "order": 190,
+          "name": "getIsAutoBidActivated",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 992,
+          "lineEnd": 995,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 512
+          }
+        },
+        {
+          "order": 193,
+          "name": "assignAutoBidsToXboxProductEntities",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 84,
+          "lineEnd": 117,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 513
+          }
+        },
+        {
+          "order": 194,
+          "name": "normalizeCreditScore",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 65,
+          "lineEnd": 82,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+            "line": 95
+          }
+        },
+        {
+          "order": 195,
+          "name": "getAutoBidsByProductIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/auto-bid-repository.ts",
+          "line": 33,
+          "lineEnd": 54,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+            "line": 101
+          }
+        },
+        {
+          "order": 196,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/auto-bid-repository.ts",
+          "line": 16,
+          "lineEnd": 21,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/auto-bid-repository.ts",
+            "line": 38
+          }
+        },
+        {
+          "order": 199,
+          "name": "generateAdditionalActions",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/actions/additionalActionsGenerator.ts",
+          "line": 9,
+          "lineEnd": 30,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 516
+          }
+        },
+        {
+          "order": 200,
+          "name": "_generateManipulationFilter",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/actions/additionalActionsGenerator.ts",
+          "line": 38,
+          "lineEnd": 52,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/actions/additionalActionsGenerator.ts",
+            "line": 17
+          }
+        },
+        {
+          "order": 201,
+          "name": "_generateWorkingHoursFilter",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/actions/additionalActionsGenerator.ts",
+          "line": 32,
+          "lineEnd": 36,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/actions/additionalActionsGenerator.ts",
+            "line": 18
+          }
+        },
+        {
+          "order": 202,
+          "name": "resolveProductListNodeBasedOnMergeType",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 594,
+          "lineEnd": 612,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 517
+          }
+        },
+        {
+          "order": 205,
+          "name": "prepareResolveProductListNodeParamsBasedOnMergeType",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 614,
+          "lineEnd": 662,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 609
+          }
+        },
+        {
+          "order": 206,
+          "name": "getFirstSuccessfulBattleLoserVendors",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 686,
+          "lineEnd": 725,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 630
+          }
+        },
+        {
+          "order": 208,
+          "name": "resolveProductListNode",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 297,
+          "lineEnd": 341,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 714
+          }
+        },
+        {
+          "order": 209,
+          "name": "resolveProductListNodeChildren",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 9,
+          "lineEnd": 22,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+            "line": 304
+          }
+        },
+        {
+          "order": 210,
+          "name": "resolveProductListNode",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 297,
+          "lineEnd": 341,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+            "line": 18
+          }
+        },
+        {
+          "order": 211,
+          "name": "resolveProductListNodeProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 88,
+          "lineEnd": 104,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+            "line": 311
+          }
+        },
+        {
+          "order": 212,
+          "name": "modifyProductListNode",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 26,
+          "lineEnd": 38,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+            "line": 94
+          }
+        },
+        {
+          "order": 213,
+          "name": "getProductListNodeProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 5,
+          "lineEnd": 12,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+            "line": 31
+          }
+        },
+        {
+          "order": 215,
+          "name": "assignAdditionalActions",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 14,
+          "lineEnd": 24,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+            "line": 32
+          }
+        },
+        {
+          "order": 217,
+          "name": "assignProductListNodePositions",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 40,
+          "lineEnd": 44,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+            "line": 101
+          }
+        },
+        {
+          "order": 219,
+          "name": "replaceVendorProductsWithApiProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 24,
+          "lineEnd": 58,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+            "line": 321
+          }
+        },
+        {
+          "order": 220,
+          "name": "mergeVendorProductsWithDataFromApi",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 60,
+          "lineEnd": 90,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+            "line": 38
+          }
+        },
+        {
+          "order": 221,
+          "name": "mergeProductOffersWithGenericsWithDataFromApi",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 92,
+          "lineEnd": 137,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+            "line": 73
+          }
+        },
+        {
+          "order": 223,
+          "name": "mergeGenericProductWithDataFromApi",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 181,
+          "lineEnd": 212,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+            "line": 115
+          }
+        },
+        {
+          "order": 226,
+          "name": "mergeProductOffersWithDataFromApi",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 151,
+          "lineEnd": 179,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+            "line": 87
+          }
+        },
+        {
+          "order": 228,
+          "name": "matchProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 139,
+          "lineEnd": 149,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+            "line": 158
+          }
+        },
+        {
+          "order": 229,
+          "name": "getSortedApiProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 106,
+          "lineEnd": 119,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+            "line": 45
+          }
+        },
+        {
+          "order": 231,
+          "name": "assignProductListNodePositions",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 40,
+          "lineEnd": 44,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+            "line": 116
+          }
+        },
+        {
+          "order": 234,
+          "name": "extendNestedSubListsWithFirstBattleWinnerTypeWithCustomVendorProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 665,
+          "lineEnd": 684,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 646
+          }
+        },
+        {
+          "order": 235,
+          "name": "extendNestedSubListsWithFirstBattleWinnerTypeWithCustomVendorProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 665,
+          "lineEnd": 684,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 682
+          }
+        },
+        {
+          "order": 236,
+          "name": "resolveProductListNode",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 297,
+          "lineEnd": 341,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 611
+          }
+        },
+        {
+          "order": 238,
+          "name": "enrichProductsWithScores",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-scores-service.ts",
+          "line": 18,
+          "lineEnd": 69,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 536
+          }
+        },
+        {
+          "order": 240,
+          "name": "getTopProductsFilter",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-scores-service.ts",
+          "line": 6,
+          "lineEnd": 7,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-scores-service.ts",
+            "line": 32
+          }
+        },
+        {
+          "order": 244,
+          "name": "getNonStaticProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1020,
+          "lineEnd": 1024,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 549
+          }
+        },
+        {
+          "order": 245,
+          "name": "resolveProductLinks",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 498,
+          "lineEnd": 508,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 553
+          }
+        },
+        {
+          "order": 246,
+          "name": "assignAffiliateLinksToProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 470,
+          "lineEnd": 496,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 500
+          }
+        },
+        {
+          "order": 248,
+          "name": "getLinksByProductIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 276,
+          "lineEnd": 305,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 480
+          }
+        },
+        {
+          "order": 249,
+          "name": "getLinkContexts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 106,
+          "lineEnd": 133,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 283
+          }
+        },
+        {
+          "order": 254,
+          "name": "getLinkContextsByProductIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/link-contexts-repository.ts",
+          "line": 26,
+          "lineEnd": 30,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 115
+          }
+        },
+        {
+          "order": 255,
+          "name": "getByProductIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/link-contexts-repository.ts",
+          "line": 20,
+          "lineEnd": 24,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/link-contexts-repository.ts",
+            "line": 29
+          }
+        },
+        {
+          "order": 256,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/link-contexts-repository.ts",
+          "line": 15,
+          "lineEnd": 18,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/link-contexts-repository.ts",
+            "line": 21
+          }
+        },
+        {
+          "order": 260,
+          "name": "filterLinkContextsByRelevantDevice",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 70,
+          "lineEnd": 104,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 117
+          }
+        },
+        {
+          "order": 264,
+          "name": "getPageContext",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 39,
+          "lineEnd": 47,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 118
+          }
+        },
+        {
+          "order": 265,
+          "name": "replaceProductLinkByLinkId",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 49,
+          "lineEnd": 68,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 122
+          }
+        },
+        {
+          "order": 268,
+          "name": "getLinkManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 28,
+          "lineEnd": 37,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 288
+          }
+        },
+        {
+          "order": 269,
+          "name": "getProductPositionsById",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 16,
+          "lineEnd": 26,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 29
+          }
+        },
+        {
+          "order": 272,
+          "name": "getLinks",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 205,
+          "lineEnd": 231,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 289
+          }
+        },
+        {
+          "order": 273,
+          "name": "getLinksByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/links-repository.ts",
+          "line": 42,
+          "lineEnd": 46,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 219
+          }
+        },
+        {
+          "order": 275,
+          "name": "getemptyPhoneManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 460,
+          "lineEnd": 468,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 296
+          }
+        },
+        {
+          "order": 276,
+          "name": "getProductPositionsById",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 16,
+          "lineEnd": 26,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 461
+          }
+        },
+        {
+          "order": 278,
+          "name": "generateLinksByProductIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 166,
+          "lineEnd": 203,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 297
+          }
+        },
+        {
+          "order": 282,
+          "name": "isLinkManipulated",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 135,
+          "lineEnd": 137,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 185
+          }
+        },
+        {
+          "order": 284,
+          "name": "markManipulatorsAsUsed",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 139,
+          "lineEnd": 159,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 200
+          }
+        },
+        {
+          "order": 289,
+          "name": "generateLinksByProductIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 166,
+          "lineEnd": 203,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 298
+          }
+        },
+        {
+          "order": 290,
+          "name": "assignPhoneToProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 401,
+          "lineEnd": 426,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 487
+          }
+        },
+        {
+          "order": 292,
+          "name": "shouldShowPhone",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 373,
+          "lineEnd": 383,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 417
+          }
+        },
+        {
+          "order": 293,
+          "name": "isProductInWorkingHours",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 385,
+          "lineEnd": 399,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 382
+          }
+        },
+        {
+          "order": 298,
+          "name": "assignLinksToProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 428,
+          "lineEnd": 458,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 488
+          }
+        },
+        {
+          "order": 299,
+          "name": "generateProductLink",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 327,
+          "lineEnd": 371,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 438
+          }
+        },
+        {
+          "order": 300,
+          "name": "addPositionToMaUrl",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 315,
+          "lineEnd": 325,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 342
+          }
+        },
+        {
+          "order": 302,
+          "name": "isProductLinkInternal",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 307,
+          "lineEnd": 309,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 351
+          }
+        },
+        {
+          "order": 303,
+          "name": "replaceProductLinkPlaceholders",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 545,
+          "lineEnd": 559,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 354
+          }
+        },
+        {
+          "order": 306,
+          "name": "addPositionToMaUrl",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 315,
+          "lineEnd": 325,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 447
+          }
+        },
+        {
+          "order": 307,
+          "name": "_reduceProductListToMaximumNumberOfProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 309,
+          "lineEnd": 323,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 554
+          }
+        },
+        {
+          "order": 308,
+          "name": "resolveProductAddOns",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+          "line": 155,
+          "lineEnd": 170,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 559
+          }
+        },
+        {
+          "order": 309,
+          "name": "getAddOnsManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+          "line": 18,
+          "lineEnd": 34,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+            "line": 157
+          }
+        },
+        {
+          "order": 311,
+          "name": "getAddOnProductFeatureValues",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+          "line": 56,
+          "lineEnd": 64,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+            "line": 161
+          }
+        },
+        {
+          "order": 312,
+          "name": "extractEntityIdsFromManipulators",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+          "line": 36,
+          "lineEnd": 54,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+            "line": 61
+          }
+        },
+        {
+          "order": 317,
+          "name": "setAddOnsOnProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+          "line": 103,
+          "lineEnd": 115,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+            "line": 162
+          }
+        },
+        {
+          "order": 318,
+          "name": "setAddOnsOnSingleProduct",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+          "line": 84,
+          "lineEnd": 101,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+            "line": 111
+          }
+        },
+        {
+          "order": 319,
+          "name": "generateProductAddOns",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+          "line": 77,
+          "lineEnd": 82,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+            "line": 95
+          }
+        },
+        {
+          "order": 320,
+          "name": "generateSingleAddOn",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+          "line": 66,
+          "lineEnd": 75,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+            "line": 81
+          }
+        },
+        {
+          "order": 322,
+          "name": "resolvePositionAttributesBySegmentId",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+          "line": 77,
+          "lineEnd": 97,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 560
+          }
+        },
+        {
+          "order": 323,
+          "name": "getPositionAttributes",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+          "line": 47,
+          "lineEnd": 75,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+            "line": 88
+          }
+        },
+        {
+          "order": 325,
+          "name": "getPositionAttributesManipulator",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+          "line": 29,
+          "lineEnd": 36,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+            "line": 61
+          }
+        },
+        {
+          "order": 326,
+          "name": "getPositionAttributesVariant",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+          "line": 38,
+          "lineEnd": 45,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+            "line": 67
+          }
+        },
+        {
+          "order": 328,
+          "name": "assignPositionAttributesToProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+          "line": 15,
+          "lineEnd": 27,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+            "line": 94
+          }
+        },
+        {
+          "order": 329,
+          "name": "convertScoreToText",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+          "line": 11,
+          "lineEnd": 13,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+            "line": 23
+          }
+        },
+        {
+          "order": 331,
+          "name": "resolveProductFeatureValues",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 85,
+          "lineEnd": 141,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 565
+          }
+        },
+        {
+          "order": 332,
+          "name": "assignBidInfoToProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 119,
+          "lineEnd": 140,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 572
+          }
+        },
+        {
+          "order": 333,
+          "name": "getSublistMetadata",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 12,
+          "lineEnd": 20,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+            "line": 128
+          }
+        },
+        {
+          "order": 335,
+          "name": "getProductBidInfo",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 29,
+          "lineEnd": 63,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+            "line": 134
+          }
+        },
+        {
+          "order": 337,
+          "name": "formatBidValue",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 39,
+          "lineEnd": 46,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+            "line": 49
+          }
+        },
+        {
+          "order": 339,
+          "name": "formatBidValue",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 39,
+          "lineEnd": 46,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+            "line": 52
+          }
+        },
+        {
+          "order": 341,
+          "name": "formatBidValue",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 39,
+          "lineEnd": 46,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+            "line": 55
+          }
+        },
+        {
+          "order": 342,
+          "name": "formatBidValue",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 39,
+          "lineEnd": 46,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+            "line": 61
+          }
+        },
+        {
+          "order": 343,
+          "name": "sendBattleEvents",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 26,
+          "lineEnd": 97,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+            "line": 579
+          }
+        },
+        {
+          "order": 345,
+          "name": "findBattles",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 147,
+          "lineEnd": 160,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+            "line": 35
+          }
+        },
+        {
+          "order": 346,
+          "name": "findBattles",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 147,
+          "lineEnd": 160,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+            "line": 36
+          }
+        },
+        {
+          "order": 347,
+          "name": "getBattlesData",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 105,
+          "lineEnd": 145,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+            "line": 42
+          }
+        },
+        {
+          "order": 349,
+          "name": "calculateSingleBattle",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 167,
+          "lineEnd": 196,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+            "line": 126
+          }
+        },
+        {
+          "order": 350,
+          "name": "extractBattleInfo",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 198,
+          "lineEnd": 212,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+            "line": 175
+          }
+        },
+        {
+          "order": 351,
+          "name": "createVendorProductIdsMap",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 214,
+          "lineEnd": 222,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+            "line": 178
+          }
+        },
+        {
+          "order": 352,
+          "name": "calculateParticipants",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 224,
+          "lineEnd": 248,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+            "line": 179
+          }
+        },
+        {
+          "order": 353,
+          "name": "createBattleResult",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 250,
+          "lineEnd": 282,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+            "line": 180
+          }
+        },
+        {
+          "order": 354,
+          "name": "determineGlobalWinner",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 284,
+          "lineEnd": 317,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+            "line": 182
+          }
+        },
+        {
+          "order": 361,
+          "name": "extractProductsFromProductList",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 62,
+          "lineEnd": 83,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 88
+          }
+        },
+        {
+          "order": 362,
+          "name": "getUniqueProductsByMasterProduct",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/master-product-resolver.ts",
+          "line": 56,
+          "lineEnd": 58,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 71
+          }
+        },
+        {
+          "order": 365,
+          "name": "getProductsByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/products-repository.ts",
+          "line": 34,
+          "lineEnd": 55,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 94
+          }
+        },
+        {
+          "order": 366,
+          "name": "extractProductsFromProductListByMasterProduct",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/master-product-resolver.ts",
+          "line": 33,
+          "lineEnd": 54,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 96
+          }
+        },
+        {
+          "order": 367,
+          "name": "getUniqueProductsByMasterProduct",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/master-product-resolver.ts",
+          "line": 56,
+          "lineEnd": 58,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/master-product-resolver.ts",
+            "line": 40
+          }
+        },
+        {
+          "order": 369,
+          "name": "handleNonePlProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 118,
+          "lineEnd": 172,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+            "line": 108
+          }
+        },
+        {
+          "order": 375,
+          "name": "mapProductFeatureIdsToRoles",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+          "line": 33,
+          "lineEnd": 38,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+            "line": 923
+          }
+        },
+        {
+          "order": 376,
+          "name": "assignProductFeaturesToProduct",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+          "line": 52,
+          "lineEnd": 78,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+            "line": 925
+          }
+        },
+        {
+          "order": 377,
+          "name": "formatProductFeatureValue",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+          "line": 40,
+          "lineEnd": 50,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+            "line": 73
+          }
+        }
+      ],
+      "externalPackages": [
+        {
+          "order": 1,
+          "package": "unknown",
+          "symbol": "modernContextAndLogger?",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+          "line": 318,
+          "snippet": "modernContextAndLogger?.context?.get?.()"
+        },
+        {
+          "order": 5,
+          "package": "unknown",
+          "symbol": "connectionHelper\n    ",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/products-repository.ts",
+          "line": 29,
+          "snippet": "connectionHelper\n    .connectionShim()"
+        },
+        {
+          "order": 7,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/products-repository.ts",
+          "line": 47,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 8,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/products-repository.ts",
+          "line": 48,
+          "snippet": "logger.error(`getProductsByIds - Failed retrieving products with ids: ${id.join(', ')}`, {\n      ..."
+        },
+        {
+          "order": 10,
+          "package": "flat",
+          "symbol": "flat",
+          "method": "flatten",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 129,
+          "snippet": "flat.flatten(productFeatures)"
+        },
+        {
+          "order": 11,
+          "package": "unknown",
+          "symbol": "unknown",
+          "method": "unknown",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 138,
+          "snippet": "(resolveProductLinks as unknown as ResolveProductLinksFn)(\n    { ...productList, products: nonePl..."
+        },
+        {
+          "order": 15,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "getProductFeatureManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 118,
+          "snippet": "manipulatorHelper.getProductFeatureManipulation(contextId, productFeatureIds)"
+        },
+        {
+          "order": 18,
+          "package": "unknown",
+          "symbol": "connectionHelper\n    ",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 22,
+          "snippet": "connectionHelper\n    .connectionShim(true)"
+        },
+        {
+          "order": 20,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 41,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 21,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 42,
+          "snippet": "logger.error(\n        `getProductFeatureValueGroupsByProductFeatureIds - Failed retrieving produc..."
+        },
+        {
+          "order": 23,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "groupBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 76,
+          "snippet": "groupBy(productFeatureValueGroups, 'varType')"
+        },
+        {
+          "order": 25,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 101,
+          "snippet": "keyBy(productFeatureValueGroups, 'varId')"
+        },
+        {
+          "order": 27,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 42,
+          "snippet": "keyBy(manipulators, 'data.productFeatureId')"
+        },
+        {
+          "order": 29,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "markManipulationAsUsed",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 62,
+          "snippet": "manipulatorHelper.markManipulationAsUsed({ ...productFeatureManipulation, manipulators: appliedMa..."
+        },
+        {
+          "order": 30,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 87,
+          "snippet": "keyBy(defaultProductFeatureValueGroupVariants, 'productFeatureId')"
+        },
+        {
+          "order": 31,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 88,
+          "snippet": "keyBy(requestedProductFeatureValueGroupsVariants, 'productFeatureId')"
+        },
+        {
+          "order": 32,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 89,
+          "snippet": "keyBy(manipulatedProductFeatureGroupVariants, 'productFeatureId')"
+        },
+        {
+          "order": 33,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "getProductFeatureValueOverrideManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 210,
+          "snippet": "manipulatorHelper.getProductFeatureValueOverrideManipulation(\n      contextId,\n      productIds,\n..."
+        },
+        {
+          "order": 37,
+          "package": "typescript",
+          "symbol": "resolvedIdsSet",
+          "method": "has",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "resolvedIdsSet.has(key)"
+        },
+        {
+          "order": 38,
+          "package": "xsite-ni-shared-cache",
+          "symbol": "ObjectId",
+          "method": "isValid",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/node_modules/xsite-ni-shared-cache/node_modules/bson/bson.d.ts",
+          "line": 1439,
+          "snippet": "ObjectId.isValid(valueId)"
+        },
+        {
+          "order": 43,
+          "package": "unknown",
+          "symbol": "connectionHelper\n    ",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 27,
+          "snippet": "connectionHelper\n    .connectionShim()"
+        },
+        {
+          "order": 45,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 78,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 46,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "warn",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 79,
+          "snippet": "logger.warn(\n        `getProductFeatureValuesByIds - Failed retrieving productFeatureValues with ..."
+        },
+        {
+          "order": 49,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 47,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 50,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "warn",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 48,
+          "snippet": "logger.warn(\n          `getProductFeatureValuesByProductIdsAndValueGroupVarIds - Failed retrievin..."
+        },
+        {
+          "order": 54,
+          "package": "typescript",
+          "symbol": "overrideMap",
+          "method": "has",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "overrideMap.has(overrideKey)"
+        },
+        {
+          "order": 56,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 229,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 57,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 230,
+          "snippet": "logger.error(\n      `getProductFeatureValuesByProductAndFeatureIds - Failed retrieving productFea..."
+        },
+        {
+          "order": 61,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "getProductFeatureValueOverrideManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 113,
+          "snippet": "manipulatorHelper.getProductFeatureValueOverrideManipulation(contextId, productIds, productFeatur..."
+        },
+        {
+          "order": 66,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "isEmpty",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 58,
+          "snippet": "isEmpty(requestedProductFeatures)"
+        },
+        {
+          "order": 67,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "groupBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 62,
+          "snippet": "groupBy(productFeatureValues, 'productId')"
+        },
+        {
+          "order": 69,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 31,
+          "snippet": "keyBy(productFeatureValues, 'productFeatureId')"
+        },
+        {
+          "order": 70,
+          "package": "flat",
+          "symbol": "flat",
+          "method": "flatten",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 32,
+          "snippet": "flat.flatten(requestedProductFeatures)"
+        },
+        {
+          "order": 72,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "set",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 40,
+          "snippet": "set(productFeatureContainer, path, productFeature)"
+        },
+        {
+          "order": 73,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 137,
+          "snippet": "getModernContextLogger()"
+        },
+        {
+          "order": 74,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 138,
+          "snippet": "logger.error(`resolveProductFeatureValues - Failed to resolve product feature values.`, error)"
+        },
+        {
+          "order": 76,
+          "package": "ni-service-contracts",
+          "symbol": "ServiceResult",
+          "method": "getSuccessResult",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 253,
+          "snippet": "ServiceResult.getSuccessResult('Products retrieved successfully', result.products)"
+        },
+        {
+          "order": 77,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 256,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 78,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 257,
+          "snippet": "logger.error(`getByDirectIds - return error response with exception code`, error, {\n      context..."
+        },
+        {
+          "order": 79,
+          "package": "unknown",
+          "symbol": "response",
+          "method": "setAsError",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 260,
+          "snippet": "response.setAsError(coreConstants.errorCodes.exception, [], error, error.toString())"
+        },
+        {
+          "order": 87,
+          "package": "unknown",
+          "symbol": "connectionHelper\n    ",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/segments-repository.ts",
+          "line": 20,
+          "snippet": "connectionHelper\n    .connectionShim()"
+        },
+        {
+          "order": 90,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 478,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 95,
+          "package": "unknown",
+          "symbol": "connectionHelper\n    ",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+          "line": 29,
+          "snippet": "connectionHelper\n    .connectionShim()"
+        },
+        {
+          "order": 99,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 338,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 100,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 339,
+          "snippet": "logger.error(\n        `getProductListComposition - Error: Did not find any product list compositi..."
+        },
+        {
+          "order": 102,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "warn",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 483,
+          "snippet": "logger.warn(\n      `resolveProductList - Did not find any product list compositions with id: ${pr..."
+        },
+        {
+          "order": 110,
+          "package": "flat",
+          "symbol": "flat",
+          "method": "flatten",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 101,
+          "snippet": "flat.flatten(productFeatures)"
+        },
+        {
+          "order": 111,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "uniqBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 104,
+          "snippet": "uniqBy(\n    [...requestedProductFeatureIds, ...filterProductFeatureIds, ...productFeatureIds],\n  ..."
+        },
+        {
+          "order": 115,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "uniq",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/master-product-resolver.ts",
+          "line": 7,
+          "snippet": "uniq(\n    products.filter((prod) => prod.masterProductId).map((prod) => prod.masterProductId.toSt..."
+        },
+        {
+          "order": 121,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/master-products-repository.ts",
+          "line": 33,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 122,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/master-products-repository.ts",
+          "line": 37,
+          "snippet": "logger.error(\n      `getMasterProductsByIds - Failed retrieving master products with ids: ${maste..."
+        },
+        {
+          "order": 123,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/master-products-repository.ts",
+          "line": 46,
+          "snippet": "logger.error(\n      `getMasterProductsByIds - Failed retrieving master products with ids: ${missi..."
+        },
+        {
+          "order": 124,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/master-product-resolver.ts",
+          "line": 14,
+          "snippet": "keyBy(masterProducts, (masterProd) => masterProd.id.toString())"
+        },
+        {
+          "order": 126,
+          "package": "typescript",
+          "symbol": "masterProductNames?",
+          "method": "has",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "masterProductNames?.has(String(product?.name))"
+        },
+        {
+          "order": 131,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "uniq",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 271,
+          "snippet": "uniq(products.map((prod) => prod.id.toString()))"
+        },
+        {
+          "order": 133,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 281,
+          "snippet": "getModernContextLogger()"
+        },
+        {
+          "order": 134,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 282,
+          "snippet": "logger.error(\n      `getProductFeatureValues - Failed retrieving productFeatureValues with produc..."
+        },
+        {
+          "order": 141,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-repository.ts",
+          "line": 31,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 142,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-repository.ts",
+          "line": 36,
+          "snippet": "logger.error(\n      `getProductFeatureByIds - Failed retrieving product features with ids: ${prod..."
+        },
+        {
+          "order": 143,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-repository.ts",
+          "line": 43,
+          "snippet": "logger.error(`getProductFeatureByIds - Failed retrieving products features with ids: ${missingPfI..."
+        },
+        {
+          "order": 144,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-service.ts",
+          "line": 7,
+          "snippet": "keyBy(productFeatures, 'id')"
+        },
+        {
+          "order": 146,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "groupBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 161,
+          "snippet": "groupBy(productFeatureValues, 'productFeatureId')"
+        },
+        {
+          "order": 147,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 165,
+          "snippet": "keyBy(currentProductFeatureValues, 'productId')"
+        },
+        {
+          "order": 148,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-feature-value-resolver.ts",
+          "line": 168,
+          "snippet": "get(prod, 'masterProduct.defaultProductId', '')"
+        },
+        {
+          "order": 152,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "flatten",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1035,
+          "snippet": "flatten(node.children.map((child) => flatten(extractVendorProductEntityIds(child, acc))))"
+        },
+        {
+          "order": 153,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "flatten",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1035,
+          "snippet": "flatten(extractVendorProductEntityIds(child, acc))"
+        },
+        {
+          "order": 157,
+          "package": "ni-node-configuration",
+          "symbol": "config",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1016,
+          "snippet": "config.get('externalVendorsConfig')"
+        },
+        {
+          "order": 158,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1017,
+          "snippet": "get(qsConfig, 'enabled', false)"
+        },
+        {
+          "order": 160,
+          "package": "unknown",
+          "symbol": "featureToggleList",
+          "method": "isUIFeatureActiveSync",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 999,
+          "snippet": "featureToggleList.isUIFeatureActiveSync('ni-update-quote-ft')"
+        },
+        {
+          "order": 163,
+          "package": "unknown",
+          "symbol": "featureToggleList",
+          "method": "isUIFeatureActiveSync",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 989,
+          "snippet": "featureToggleList.isUIFeatureActiveSync('ni-product-vendors-ma-ft')"
+        },
+        {
+          "order": 166,
+          "package": "unknown",
+          "symbol": "featureToggleList",
+          "method": "isUIFeatureActiveSync",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1004,
+          "snippet": "featureToggleList.isUIFeatureActiveSync('ni-product-vendors-even-ft')"
+        },
+        {
+          "order": 169,
+          "package": "typescript",
+          "symbol": "internalFlowVendorProductTypesSet",
+          "method": "has",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "internalFlowVendorProductTypesSet.has(product.productType)"
+        },
+        {
+          "order": 171,
+          "package": "unknown",
+          "symbol": "vendorProductsProvider",
+          "method": "getVendorProducts",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 249,
+          "snippet": "vendorProductsProvider.getVendorProducts(\n    filteredVendorProducts,\n    vendorProductsOptions,\n..."
+        },
+        {
+          "order": 172,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 257,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 175,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/integration-config.service.ts",
+          "line": 30,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 180,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/integration-config.service.ts",
+          "line": 53,
+          "snippet": "logger.error(\n      `integration-config.service - error fetching config for vendorTypeShortName: ..."
+        },
+        {
+          "order": 182,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "groupBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 297,
+          "snippet": "groupBy(flatten(resolvedVendorProducts), 'productType')"
+        },
+        {
+          "order": 183,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "flatten",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 297,
+          "snippet": "flatten(resolvedVendorProducts)"
+        },
+        {
+          "order": 184,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "debug",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 298,
+          "snippet": "logger.debug(\n    `_getProductsFromVendorServices - grouped products by productType - return cach..."
+        },
+        {
+          "order": 191,
+          "package": "unknown",
+          "symbol": "featureToggleList",
+          "method": "isUIFeatureActiveSync",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 994,
+          "snippet": "featureToggleList.isUIFeatureActiveSync('ni-auto-bid-ft')"
+        },
+        {
+          "order": 197,
+          "package": "unknown",
+          "symbol": "connectionHelper\n    ",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/auto-bid-repository.ts",
+          "line": 18,
+          "snippet": "connectionHelper\n    .connectionShim(isNonNiModel)"
+        },
+        {
+          "order": 203,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 598,
+          "snippet": "getModernContextLogger(resolveProductListNodeProps.contextId)"
+        },
+        {
+          "order": 204,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 605,
+          "snippet": "logger.error(`resolveProductListNode - Some resolve PLI params are empty`, { resolveProductListNo..."
+        },
+        {
+          "order": 207,
+          "package": "typescript",
+          "symbol": "acc",
+          "method": "add",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "acc.add(childrenVendorType)"
+        },
+        {
+          "order": 214,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 7,
+          "snippet": "keyBy(products, 'id')"
+        },
+        {
+          "order": 216,
+          "package": "unknown",
+          "symbol": "filteredProductListNode",
+          "method": "resolve",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 100,
+          "snippet": "filteredProductListNode.resolve()"
+        },
+        {
+          "order": 222,
+          "package": "lodash",
+          "symbol": "_",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 101,
+          "snippet": "_.keyBy(resolvedVendorProductFromApi, (prod) => prod.productId)"
+        },
+        {
+          "order": 224,
+          "package": "typescript",
+          "symbol": "directProductsNamesSet",
+          "method": "has",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "directProductsNamesSet.has(name.trim().toLowerCase())"
+        },
+        {
+          "order": 227,
+          "package": "lodash",
+          "symbol": "_",
+          "method": "flatten",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-node-resolver.ts",
+          "line": 156,
+          "snippet": "_.flatten(\n    resolvedVendorProductFromApi.map((productOfferFromApi) => {\n      const splProduct..."
+        },
+        {
+          "order": 230,
+          "package": "unknown",
+          "symbol": "sortedProductListNode",
+          "method": "resolve",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 115,
+          "snippet": "sortedProductListNode.resolve()"
+        },
+        {
+          "order": 237,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "isEmpty",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 532,
+          "snippet": "isEmpty(options.sourceTaxonomyContext)"
+        },
+        {
+          "order": 239,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-scores-service.ts",
+          "line": 24,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 241,
+          "package": "lodash/groupBy",
+          "symbol": "unknown",
+          "method": "groupBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-scores-service.ts",
+          "line": 49,
+          "snippet": "groupBy(productsScoreResult, 'productId')"
+        },
+        {
+          "order": 242,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-scores-service.ts",
+          "line": 65,
+          "snippet": "logger.error(`enrichProductsWithScores - error while populating products with scores: ${errorMess..."
+        },
+        {
+          "order": 243,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "debug",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 543,
+          "snippet": "logger.debug(`enrichProductsWithScores - context does not have segment_id or vertical_id`, {\n    ..."
+        },
+        {
+          "order": 247,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "getProductRestrictionManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 477,
+          "snippet": "manipulatorHelper.getProductRestrictionManipulation(contextId, productIds)"
+        },
+        {
+          "order": 250,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 107,
+          "snippet": "get(options, 'modernContext.visitorDevice.deviceType', null)"
+        },
+        {
+          "order": 251,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 108,
+          "snippet": "get(options, 'rapido.path', '')"
+        },
+        {
+          "order": 252,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 109,
+          "snippet": "get(options, 'ua.device.type', '')"
+        },
+        {
+          "order": 253,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 111,
+          "snippet": "get(options, 'userPlatform', null)"
+        },
+        {
+          "order": 259,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "groupBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 116,
+          "snippet": "groupBy(linkContexts, getLinkTypeConstant)"
+        },
+        {
+          "order": 261,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "groupBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 75,
+          "snippet": "groupBy(linkContexts, 'productId')"
+        },
+        {
+          "order": 262,
+          "package": "ni-constants",
+          "symbol": "constantsLinks",
+          "method": "includes",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 88,
+          "snippet": "constantsLinks.deviceTypes.includes(deviceType.toLowerCase())"
+        },
+        {
+          "order": 263,
+          "package": "typescript",
+          "symbol": "[]",
+          "method": "apply",
+          "file": "/node_modules/typescript/lib/lib.es5.d.ts",
+          "line": 4,
+          "snippet": "[].concat.apply([], linkContextFiltered)"
+        },
+        {
+          "order": 266,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "isEmpty",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 53,
+          "snippet": "isEmpty(replaceProductLinkByLinkIdMap)"
+        },
+        {
+          "order": 267,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "cloneDeep",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 57,
+          "snippet": "cloneDeep(linkContexts)"
+        },
+        {
+          "order": 270,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "getLinkManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 30,
+          "snippet": "manipulatorHelper.getLinkManipulation(contextId, productIds, productPositionsById, {\n    linkType..."
+        },
+        {
+          "order": 271,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "getLinkManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 33,
+          "snippet": "manipulatorHelper.getLinkManipulation(contextId, productIds, productPositionsById, {\n    linkType..."
+        },
+        {
+          "order": 274,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "groupBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 226,
+          "snippet": "groupBy(allLinks, getLinkTypeConstant)"
+        },
+        {
+          "order": 277,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "getEmptyPhoneManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 462,
+          "snippet": "manipulatorHelper.getEmptyPhoneManipulation(\n    contextId,\n    productIds,\n    productPositionsB..."
+        },
+        {
+          "order": 279,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 177,
+          "snippet": "keyBy(links, 'id')"
+        },
+        {
+          "order": 280,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 178,
+          "snippet": "keyBy(manipulators, 'data.linkId')"
+        },
+        {
+          "order": 281,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 181,
+          "snippet": "get(emptyPhoneManipulation, 'data.linksHash', {})"
+        },
+        {
+          "order": 283,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 192,
+          "snippet": "get(manipulator, 'data.productId', '')"
+        },
+        {
+          "order": 285,
+          "package": "typescript",
+          "symbol": "aId",
+          "method": "localeCompare",
+          "file": "/node_modules/typescript/lib/lib.es5.d.ts",
+          "line": 4,
+          "snippet": "aId.localeCompare(bId)"
+        },
+        {
+          "order": 286,
+          "package": "typescript",
+          "symbol": "aId",
+          "method": "localeCompare",
+          "file": "/node_modules/typescript/lib/lib.es5.d.ts",
+          "line": 6,
+          "snippet": "aId.localeCompare(bId)"
+        },
+        {
+          "order": 287,
+          "package": "typescript",
+          "symbol": "aId",
+          "method": "localeCompare",
+          "file": "/node_modules/typescript/lib/lib.es2020.string.d.ts",
+          "line": 5,
+          "snippet": "aId.localeCompare(bId)"
+        },
+        {
+          "order": 288,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "markManipulationAsUsed",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 157,
+          "snippet": "manipulatorHelper.markManipulationAsUsed({ ...linkManipulation, manipulators: sortedUsedManipulat..."
+        },
+        {
+          "order": 291,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "isEmpty",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 407,
+          "snippet": "isEmpty(phoneLinksByProductIds)"
+        },
+        {
+          "order": 294,
+          "package": "ni-chart-rt",
+          "symbol": "unknown",
+          "method": "evaluateTimes",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 389,
+          "snippet": "evaluateTimes(date, product.schedule)"
+        },
+        {
+          "order": 295,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 392,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 296,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 393,
+          "snippet": "logger.error(\n      `productByWorkingHours - got error on product: productId = ${product.id}; pro..."
+        },
+        {
+          "order": 301,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "isNumber",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 316,
+          "snippet": "isNumber(position)"
+        },
+        {
+          "order": 304,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 364,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 305,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 365,
+          "snippet": "logger.error(`generateProductLink - Error on affiliate link, productId ${id}: ${err.message}`, er..."
+        },
+        {
+          "order": 310,
+          "package": "unknown",
+          "symbol": "manipulatorHelper",
+          "method": "getAddOnManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+          "line": 33,
+          "snippet": "manipulatorHelper.getAddOnManipulation(contextId, productIds, positionByProductId)"
+        },
+        {
+          "order": 313,
+          "package": "typescript",
+          "symbol": "productIds",
+          "method": "add",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "productIds.add(productId)"
+        },
+        {
+          "order": 314,
+          "package": "typescript",
+          "symbol": "productFeatureIds",
+          "method": "add",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "productFeatureIds.add(productFeatureId)"
+        },
+        {
+          "order": 321,
+          "package": "unknown",
+          "symbol": "manipulatorHelper",
+          "method": "markManipulationAsUsed",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-addons-resolver.ts",
+          "line": 164,
+          "snippet": "manipulatorHelper.markManipulationAsUsed(addOnsManipulation)"
+        },
+        {
+          "order": 324,
+          "package": "unknown",
+          "symbol": "manipulatorHelper",
+          "method": "getContentManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+          "line": 57,
+          "snippet": "manipulatorHelper.getContentManipulation(\n    contextId,\n    constantsEntities.entityTypes.POSITI..."
+        },
+        {
+          "order": 327,
+          "package": "unknown",
+          "symbol": "manipulatorHelper",
+          "method": "markManipulationAsUsed",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/position-attributes-resolver.ts",
+          "line": 69,
+          "snippet": "manipulatorHelper.markManipulationAsUsed({ ...manipulation, manipulators: [manipulator] })"
+        },
+        {
+          "order": 330,
+          "package": "typescript",
+          "symbol": "parseFloat(String(score || 0",
+          "method": "toFixed",
+          "file": "/node_modules/typescript/lib/lib.es5.d.ts",
+          "line": 4,
+          "snippet": "parseFloat(String(score || 0.0)).toFixed(1)"
+        },
+        {
+          "order": 334,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "merge",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 19,
+          "snippet": "merge({}, ...Object.values(metadata))"
+        },
+        {
+          "order": 336,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "isNil",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 48,
+          "snippet": "isNil(productBid)"
+        },
+        {
+          "order": 338,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "isNil",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 51,
+          "snippet": "isNil(productAutoBid)"
+        },
+        {
+          "order": 340,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "isNil",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/utils/bid-utils.ts",
+          "line": 54,
+          "snippet": "isNil(manualBid)"
+        },
+        {
+          "order": 344,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 33,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 348,
+          "package": "typescript",
+          "symbol": "resolvedBattlesMap",
+          "method": "get",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "resolvedBattlesMap.get(pliBattle.id?.toString() ?? '')"
+        },
+        {
+          "order": 356,
+          "package": "@products-monorepo/utils",
+          "symbol": "unknown",
+          "method": "sendEvent",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/helpers/battle-events.ts",
+          "line": 80,
+          "snippet": "sendEvent({\n      logger,\n      entityName: VENDOR_BATTLE_RESULTS_ENTITY_NAME,\n      action: VEND..."
+        },
+        {
+          "order": 357,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 55,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 358,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 56,
+          "snippet": "logger.error(`Error in getResolvedProductList: ${error.toString()}`, error, { segmentId, options })"
+        },
+        {
+          "order": 363,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "uniqBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/master-product-resolver.ts",
+          "line": 57,
+          "snippet": "uniqBy(products, (prod) => (prod.masterProductId && prod.masterProductId.toString()) || prod.id)"
+        },
+        {
+          "order": 364,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 72,
+          "snippet": "keyBy(uniqueByMasterProductId, 'id')"
+        },
+        {
+          "order": 368,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/master-product-resolver.ts",
+          "line": 41,
+          "snippet": "keyBy(uniqueProductsByMasterProduct, 'masterProductId')"
+        },
+        {
+          "order": 370,
+          "package": "ni-service-contracts",
+          "symbol": "ServiceResult",
+          "method": "getSuccessResult",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 230,
+          "snippet": "ServiceResult.getSuccessResult('Products retrieved successfully', products, { cacheResponse })"
+        },
+        {
+          "order": 371,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 234,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 372,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 235,
+          "snippet": "logger.error(`getByIds - Error in getByIds - return error response with exception code`, error, {..."
+        },
+        {
+          "order": 373,
+          "package": "unknown",
+          "symbol": "response",
+          "method": "setAsError",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 238,
+          "snippet": "response.setAsError(coreConstants.errorCodes.exception, [], error, error.toString())"
+        }
+      ],
+      "apiRequests": [],
+      "databaseCalls": [
+        {
+          "order": 6,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/products-repository.ts",
+          "line": 31,
+          "snippet": "connection.model(entities.constants.singular.rt.product)"
+        },
+        {
+          "order": 19,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 24,
+          "snippet": "connection.model(entities.constants.singular.rt.productFeatureValueGroup)"
+        },
+        {
+          "order": 44,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 29,
+          "snippet": "connection.model(entities.constants.singular.rt.productFeatureValue)"
+        },
+        {
+          "order": 88,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/segments-repository.ts",
+          "line": 22,
+          "snippet": "connection.model(entities.constants.singular.rt.segment)"
+        },
+        {
+          "order": 96,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-list-compositions-repository.ts",
+          "line": 31,
+          "snippet": "connection.model(entities.constants.singular.rt.productListComposition)"
+        },
+        {
+          "order": 118,
+          "package": "ni-core-entities-provider-rt",
+          "symbol": "connectionHelper",
+          "method": "then",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/master-products-repository.ts",
+          "line": 23,
+          "snippet": "connectionHelper.connectionShim().then((connection) => connection.model(entityType))"
+        },
+        {
+          "order": 119,
+          "package": "ni-core-entities-provider-rt",
+          "symbol": "connectionHelper",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/master-products-repository.ts",
+          "line": 23,
+          "snippet": "connectionHelper.connectionShim()"
+        },
+        {
+          "order": 120,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/master-products-repository.ts",
+          "line": 23,
+          "snippet": "connection.model(entityType)"
+        },
+        {
+          "order": 138,
+          "package": "ni-core-entities-provider-rt",
+          "symbol": "connectionHelper",
+          "method": "then",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-repository.ts",
+          "line": 21,
+          "snippet": "connectionHelper.connectionShim().then((connection) => connection.model(entityType))"
+        },
+        {
+          "order": 139,
+          "package": "ni-core-entities-provider-rt",
+          "symbol": "connectionHelper",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-repository.ts",
+          "line": 21,
+          "snippet": "connectionHelper.connectionShim()"
+        },
+        {
+          "order": 140,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-repository.ts",
+          "line": 21,
+          "snippet": "connection.model(entityType)"
+        },
+        {
+          "order": 178,
+          "package": "ni-core-entities-provider-rt",
+          "symbol": "connectionHelper",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/integration-config-repository.ts",
+          "line": 38,
+          "snippet": "connectionHelper.connectionShim(true)"
+        },
+        {
+          "order": 179,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/integration-config-repository.ts",
+          "line": 39,
+          "snippet": "connection.model(entityName)"
+        },
+        {
+          "order": 198,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/auto-bid-repository.ts",
+          "line": 20,
+          "snippet": "connection.model(entities.constants.singular.rt.autoBid)"
+        },
+        {
+          "order": 257,
+          "package": "ni-core-entities-provider-rt",
+          "symbol": "connectionHelper",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/link-contexts-repository.ts",
+          "line": 16,
+          "snippet": "connectionHelper.connectionShim()"
+        },
+        {
+          "order": 258,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/link-contexts-repository.ts",
+          "line": 17,
+          "snippet": "connection.model(entities.constants.singular.rt.linkContext)"
+        }
+      ],
+      "classInstantiations": [
+        {
+          "order": 81,
+          "className": "ServiceResult",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 255,
+          "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts"
+        },
+        {
+          "order": 161,
+          "className": "FeatureToggleList",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 998,
+          "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts"
+        },
+        {
+          "order": 164,
+          "className": "FeatureToggleList",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 988,
+          "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts"
+        },
+        {
+          "order": 167,
+          "className": "FeatureToggleList",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 1003,
+          "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts"
+        },
+        {
+          "order": 185,
+          "className": "VendorsHandler",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 270,
+          "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/packages/vendors/src/vendors-handler.ts"
+        },
+        {
+          "order": 192,
+          "className": "FeatureToggleList",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts",
+          "line": 993,
+          "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-list-resolver.ts"
+        },
+        {
+          "order": 218,
+          "className": "ActionHandler",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 95,
+          "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/actions/ActionHandler.ts"
+        },
+        {
+          "order": 232,
+          "className": "ActionHandler",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-resolver.ts",
+          "line": 112,
+          "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/actions/ActionHandler.ts"
+        },
+        {
+          "order": 374,
+          "className": "ServiceResult",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts",
+          "line": 232,
+          "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-service.ts"
+        }
+      ]
+    }
+  ]
+}

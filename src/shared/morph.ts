@@ -25,7 +25,7 @@ export function createProject(tsconfig?: string): Project {
 export const addAllSourceFilesToProject = async (project: ReturnType<typeof createProject>, rootDir: string): Promise<string[]> => {
   const tsFiles = await glob('**/*.{ts,tsx,js,jsx}', {
     cwd: rootDir,
-    ignore: ['node_modules/**', '.git/**', 'dist/**', 'build/**', 'docs/**']
+    ignore: ['node_modules/**', '.git/**', 'dist/**', 'build/**', 'docs/**', 'bin/**']
   });
 
   const absolutePaths = tsFiles.map((file) => path.join(rootDir, file));

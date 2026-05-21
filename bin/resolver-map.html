@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolver Map Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        #canvas {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+        }
+
+        .controls {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(30, 30, 30, 0.95);
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            border-radius: 8px;
+            padding: 16px;
+            z-index: 100;
+            min-width: 280px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        .controls h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #b0b0b0;
+        }
+
+        .control-group {
+            margin-bottom: 16px;
+        }
+
+        .control-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .checkbox-group input {
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            accent-color: #4a9eff;
+        }
+
+        .checkbox-group label {
+            cursor: pointer;
+            font-size: 13px;
+            flex: 1;
+        }
+
+        .color-legend {
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 0;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .stat {
+            font-size: 12px;
+            padding: 4px 0;
+            color: #a0a0a0;
+        }
+
+        .stat-value {
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        .info-panel {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(30, 30, 30, 0.95);
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            border-radius: 8px;
+            padding: 16px;
+            width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
+            z-index: 100;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            display: none;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .info-panel.visible {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .info-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+        }
+
+        .info-panel-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        .info-panel-subtitle {
+            font-size: 12px;
+            color: #a0a0a0;
+            margin-top: 2px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: #808080;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+        }
+
+        .section {
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #b0b0b0;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .summary-item {
+            background: rgba(70, 130, 180, 0.1);
+            border: 1px solid rgba(74, 158, 255, 0.2);
+            border-radius: 4px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .summary-item-label {
+            font-size: 11px;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .summary-item-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #4a9eff;
+            margin-top: 4px;
+        }
+
+        .item-list {
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .item-entry {
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(100, 100, 100, 0.1);
+            color: #d0d0d0;
+        }
+
+        .item-entry:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-weight: 500;
+            color: #4a9eff;
+        }
+
+        .item-file {
+            font-size: 11px;
+            color: #808080;
+            margin-top: 2px;
+            word-break: break-all;
+        }
+
+        .item-meta {
+            font-size: 10px;
+            color: #606060;
+            margin-top: 2px;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #808080;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 2px solid rgba(74, 158, 255, 0.3);
+            border-top-color: #4a9eff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error {
+            background: rgba(255, 100, 100, 0.1);
+            border: 1px solid rgba(255, 100, 100, 0.3);
+            color: #ff8080;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .hint {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            font-size: 12px;
+            color: #808080;
+            background: rgba(30, 30, 30, 0.8);
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid rgba(100, 100, 100, 0.2);
+            z-index: 50;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(100, 100, 100, 0.1);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 100, 100, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 100, 100, 0.5);
+        }
+
+        /* Code Modal Styles */
+        .code-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 200;
+            animation: fadeIn 0.2s ease-out;
+        }
+
+        .code-modal.visible {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .code-modal-content {
+            background: rgba(30, 30, 30, 0.98);
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            border-radius: 8px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        .code-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            padding: 16px;
+            border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+            flex-shrink: 0;
+        }
+
+        .code-modal-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        .code-modal-subtitle {
+            font-size: 12px;
+            color: #a0a0a0;
+            margin-top: 4px;
+        }
+
+        .code-modal-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+            background: rgba(20, 20, 20, 0.8);
+        }
+
+        #code-modal-code {
+            margin: 0;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(100, 100, 100, 0.2);
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #d0d0d0;
+            overflow-x: auto;
+            white-space: pre;
+        }
+
+        /* Simple code highlighting */
+        .code-keyword {
+            color: #569cd6;
+        }
+
+        .code-string {
+            color: #ce9178;
+        }
+
+        .code-comment {
+            color: #6a9955;
+        }
+
+        .code-function {
+            color: #dcdcaa;
+        }
+
+        .code-number {
+            color: #b5cea8;
+        }
+    </style>
+</head>
+<body>
+    <svg id="canvas"></svg>
+
+    <div class="controls">
+        <h3>Visualization</h3>
+        <div class="control-group">
+            <div class="checkbox-group">
+                <input type="checkbox" id="toggle-services" checked>
+                <label for="toggle-services">Services</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="toggle-types" checked>
+                <label for="toggle-types">Types</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="toggle-resolvers" checked>
+                <label for="toggle-resolvers">Resolvers</label>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <h3 style="margin-bottom: 8px;">Services</h3>
+            <div class="stat">Total: <span class="stat-value" id="service-count">0</span></div>
+            <div id="service-legend" class="color-legend" style="margin-top: 8px;"></div>
+        </div>
+
+        <div class="control-group">
+            <div class="stat">Types: <span class="stat-value" id="type-count">0</span></div>
+            <div class="stat">Resolvers: <span class="stat-value" id="resolver-count">0</span></div>
+        </div>
+    </div>
+
+    <div class="info-panel" id="info-panel">
+        <div class="info-panel-header">
+            <div>
+                <div class="info-panel-title" id="panel-title">Resolver Details</div>
+                <div class="info-panel-subtitle" id="panel-subtitle"></div>
+            </div>
+            <button class="close-btn" onclick="closePanel()">&times;</button>
+        </div>
+
+        <div id="panel-content">
+            <div class="loading"><span class="spinner"></span>Loading resolver flow...</div>
+        </div>
+    </div>
+
+    <div class="hint">Click on resolver nodes to see resolver flow. Use scroll to zoom, drag to pan.</div>
+
+    <div class="code-modal" id="code-modal">
+        <div class="code-modal-content">
+            <div class="code-modal-header">
+                <div>
+                    <div class="code-modal-title" id="code-modal-title">Function Code</div>
+                    <div class="code-modal-subtitle" id="code-modal-subtitle"></div>
+                </div>
+                <button class="close-btn" onclick="closeCodeModal()">&times;</button>
+            </div>
+            <div class="code-modal-body">
+                <pre id="code-modal-code"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============ DATA STRUCTURES ============
+        let graphData = {
+            nodes: [],
+            edges: [],
+            services: [],
+            types: {},
+            resolversMap: {}
+        };
+
+        let vizState = {
+            visibleLayers: { services: true, types: true, resolvers: true },
+            selectedNode: null,
+            simulation: null
+        };
+
+        const serviceColors = {
+            'content-element-rts': '#4a9eff',
+            'product-rts': '#ff6b6b',
+            'default': '#888888'
+        };
+
+        const nodeRadii = {
+            service: 28,
+            type: 18,
+            resolver: 10
+        };
+
+        // ============ LOAD AND PARSE DATA ============
+        async function loadData() {
+            try {
+                let response = await fetch('./resolver-map.json');
+                
+                // If file:// protocol fails, try different paths
+                if (!response.ok && window.location.protocol === 'file:') {
+                    console.log('Trying alternative path for file:// protocol');
+                    response = await fetch('resolver-map.json');
+                }
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: Failed to fetch resolver-map.json. Make sure you're serving the docs folder via a web server (not file://).`);
+                }
+                
+                const data = await response.json();
+
+                // Build services layer
+                data.services.forEach(service => {
+                    graphData.services.push(service);
+                    graphData.nodes.push({
+                        id: `service-${service}`,
+                        type: 'service',
+                        name: service,
+                        radius: nodeRadii.service,
+                        layer: 0
+                    });
+                });
+
+                // Build types layer from typeOwnership
+                Object.entries(data.typeOwnership).forEach(([type, ownerService]) => {
+                    graphData.types[type] = ownerService;
+                    graphData.nodes.push({
+                        id: `type-${type}`,
+                        type: 'type',
+                        name: type,
+                        ownerService: ownerService,
+                        radius: nodeRadii.type,
+                        layer: 1
+                    });
+
+                    // Edge: service -> type
+                    graphData.edges.push({
+                        source: `service-${ownerService}`,
+                        target: `type-${type}`,
+                        style: 'solid'
+                    });
+                });
+
+                // Add root types (Query, Mutation, etc.) that have resolvers but aren't in typeOwnership
+                const rootTypes = new Set();
+                data.resolvers.forEach(resolver => {
+                    if (!graphData.types[resolver.parentType] && resolver.parentType !== 'Query') {
+                        // Query and standard root types - assign to first service or create virtual
+                        rootTypes.add(resolver.parentType);
+                    }
+                });
+                
+                // Assign root Query type to the first service (or create a virtual root service)
+                const rootService = data.services?.[0] || 'root';
+                if (!graphData.types['Query']) {
+                    graphData.types['Query'] = rootService;
+                    graphData.nodes.push({
+                        id: 'type-Query',
+                        type: 'type',
+                        name: 'Query',
+                        ownerService: rootService,
+                        radius: nodeRadii.type,
+                        layer: 1,
+                        isRoot: true
+                    });
+                    graphData.edges.push({
+                        source: `service-${rootService}`,
+                        target: 'type-Query',
+                        style: 'solid'
+                    });
+                }
+                
+                // Add any other missing parent types (shouldn't be needed usually)
+                rootTypes.forEach(typeName => {
+                    if (!graphData.types[typeName]) {
+                        graphData.types[typeName] = rootService;
+                        graphData.nodes.push({
+                            id: `type-${typeName}`,
+                            type: 'type',
+                            name: typeName,
+                            ownerService: rootService,
+                            radius: nodeRadii.type,
+                            layer: 1,
+                            isRoot: true
+                        });
+                        graphData.edges.push({
+                            source: `service-${rootService}`,
+                            target: `type-${typeName}`,
+                            style: 'solid'
+                        });
+                    }
+                });
+
+                // Handle cross-service dependencies (dashed edges)
+                data.crossServiceDependencies?.forEach(dep => {
+                    dep.extendedBy?.forEach(extension => {
+                        graphData.edges.push({
+                            source: `service-${extension.service}`,
+                            target: `type-${dep.type}`,
+                            style: 'dashed'
+                        });
+                    });
+                });
+
+                // Build resolvers layer
+                data.resolvers.forEach(resolver => {
+                    const resolverId = `resolver-${resolver.service}-${resolver.parentType}-${resolver.name}`;
+                    graphData.resolversMap[resolverId] = resolver;
+                    graphData.nodes.push({
+                        id: resolverId,
+                        type: 'resolver',
+                        name: resolver.name,
+                        parentType: resolver.parentType,
+                        service: resolver.service,
+                        kind: resolver.kind,
+                        definitionFile: resolver.definitionFile,
+                        line: resolver.line,
+                        radius: nodeRadii.resolver,
+                        layer: 2
+                    });
+
+                    // Edge: type -> resolver (only if type exists)
+                    if (graphData.types[resolver.parentType]) {
+                        graphData.edges.push({
+                            source: `type-${resolver.parentType}`,
+                            target: resolverId,
+                            style: 'solid'
+                        });
+                    }
+                });
+
+                updateStats();
+                initVisualization();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                const errorMsg = `
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(30, 30, 30, 0.95); border: 1px solid rgba(255, 100, 100, 0.5); color: #ff8080; padding: 24px; border-radius: 8px; max-width: 500px; text-align: center; z-index: 1000;">
+                        <div style="font-size: 18px; font-weight: bold; margin-bottom: 12px;">Failed to load resolver map data</div>
+                        <div style="font-size: 13px; color: #d0d0d0; margin-bottom: 12px;">
+                            ${error.message}
+                        </div>
+                        <div style="font-size: 12px; color: #a0a0a0; margin-top: 16px; border-top: 1px solid rgba(100, 100, 100, 0.2); padding-top: 12px;">
+                            <strong>Solution:</strong> Serve this file via a web server (e.g., <code style="background: rgba(0,0,0,0.3); padding: 2px 4px; border-radius: 2px;">python -m http.server 8000</code>) instead of opening directly as a file.
+                        </div>
+                    </div>
+                `;
+                document.body.innerHTML += errorMsg;
+            }
+        }
+
+        function updateStats() {
+            document.getElementById('service-count').textContent = graphData.services.length;
+            document.getElementById('type-count').textContent = Object.keys(graphData.types).length;
+            document.getElementById('resolver-count').textContent = 
+                graphData.nodes.filter(n => n.type === 'resolver').length;
+
+            const legendHtml = graphData.services.map(service => `
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: ${serviceColors[service] || serviceColors.default}"></div>
+                    <span>${service}</span>
+                </div>
+            `).join('');
+            document.getElementById('service-legend').innerHTML = legendHtml;
+        }
+
+        // ============ D3 VISUALIZATION ============
+        function initVisualization() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            const svg = d3.select('#canvas')
+                .attr('width', width)
+                .attr('height', height);
+
+            // Clear previous content
+            svg.selectAll('*').remove();
+
+            // Add container for zooming
+            const g = svg.append('g');
+
+            // Add zoom behavior
+            const zoom = d3.zoom()
+                .on('zoom', (event) => {
+                    g.attr('transform', event.transform);
+                });
+            svg.call(zoom);
+
+            // Create defs for markers and gradients
+            const defs = g.append('defs');
+            
+            defs.append('marker')
+                .attr('id', 'arrowhead-solid')
+                .attr('markerWidth', 10)
+                .attr('markerHeight', 10)
+                .attr('refX', 15)
+                .attr('refY', 3)
+                .attr('orient', 'auto')
+                .append('polygon')
+                .attr('points', '0 0, 10 3, 0 6')
+                .attr('fill', 'rgba(100, 150, 200, 0.4)');
+
+            defs.append('marker')
+                .attr('id', 'arrowhead-dashed')
+                .attr('markerWidth', 10)
+                .attr('markerHeight', 10)
+                .attr('refX', 15)
+                .attr('refY', 3)
+                .attr('orient', 'auto')
+                .append('polygon')
+                .attr('points', '0 0, 10 3, 0 6')
+                .attr('fill', 'rgba(150, 100, 150, 0.4)');
+
+            // Seed initial positions by layer
+            graphData.nodes.forEach(node => {
+                const layerOffset = node.layer * (height / 4);
+                const layerCount = graphData.nodes.filter(n => n.layer === node.layer).length;
+                const indexInLayer = graphData.nodes.filter(n => n.layer === node.layer && 
+                    graphData.nodes.indexOf(n) <= graphData.nodes.indexOf(node)).length - 1;
+                
+                node.x = (width / (layerCount + 1)) * (indexInLayer + 1) + (Math.random() - 0.5) * 100;
+                node.y = height * 0.2 + layerOffset + (Math.random() - 0.5) * 100;
+            });
+
+            // Create force simulation
+            vizState.simulation = d3.forceSimulation(graphData.nodes)
+                .force('link', d3.forceLink(graphData.edges)
+                    .id(d => d.id)
+                    .distance(100)
+                    .strength(0.5))
+                .force('charge', d3.forceManyBody().strength(-300))
+                .force('center', d3.forceCenter(width / 2, height / 2).strength(0.05))
+                .force('collide', d3.forceCollide(d => d.radius + 15))
+                .on('tick', () => {
+                    link.attr('x1', d => d.source.x)
+                        .attr('y1', d => d.source.y)
+                        .attr('x2', d => d.target.x)
+                        .attr('y2', d => d.target.y);
+
+                    node.attr('cx', d => d.x)
+                        .attr('cy', d => d.y);
+
+                    label.attr('x', d => d.x)
+                        .attr('y', d => d.y + 4);
+                });
+
+            // Draw edges
+            const link = g.selectAll('.edge')
+                .data(graphData.edges)
+                .enter()
+                .append('line')
+                .attr('class', 'edge')
+                .attr('stroke', d => d.style === 'dashed' ? 'rgba(150, 100, 150, 0.3)' : 'rgba(100, 150, 200, 0.3)')
+                .attr('stroke-width', 1.5)
+                .attr('stroke-dasharray', d => d.style === 'dashed' ? '4,4' : '0')
+                .attr('marker-end', d => d.style === 'dashed' ? 'url(#arrowhead-dashed)' : 'url(#arrowhead-solid)')
+                .attr('opacity', 0.6);
+
+            // Draw nodes
+            const node = g.selectAll('.node')
+                .data(graphData.nodes)
+                .enter()
+                .append('circle')
+                .attr('class', 'node')
+                .attr('r', d => d.radius)
+                .attr('fill', d => {
+                    if (d.type === 'service') return serviceColors[d.name] || serviceColors.default;
+                    if (d.type === 'type') return serviceColors[d.ownerService] || serviceColors.default;
+                    return serviceColors[d.service] || serviceColors.default;
+                })
+                .attr('opacity', 0.8)
+                .attr('stroke', d => {
+                    if (d.type === 'type' && d.ownerService) return 'rgba(255, 255, 255, 0.1)';
+                    return 'rgba(255, 255, 255, 0.2)';
+                })
+                .attr('stroke-width', 2)
+                .style('cursor', d => d.type === 'resolver' ? 'pointer' : 'grab')
+                .on('click', (event, d) => {
+                    if (d.type === 'resolver') {
+                        event.stopPropagation();
+                        showResolverPanel(d);
+                    }
+                })
+                .on('mouseover', function(event, d) {
+                    d3.select(this)
+                        .transition()
+                        .duration(200)
+                        .attr('stroke-width', 3)
+                        .attr('opacity', 1);
+                })
+                .on('mouseout', function(event, d) {
+                    d3.select(this)
+                        .transition()
+                        .duration(200)
+                        .attr('stroke-width', 2)
+                        .attr('opacity', 0.8);
+                });
+
+            // Add drag behavior
+            node.call(d3.drag()
+                .on('start', dragstarted)
+                .on('drag', dragged)
+                .on('end', dragended));
+
+            function dragstarted(event, d) {
+                if (!event.active) vizState.simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+
+            function dragged(event, d) {
+                d.fx = event.x;
+                d.fy = event.y;
+            }
+
+            function dragended(event, d) {
+                if (!event.active) vizState.simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+            }
+
+            // Draw labels
+            const label = g.selectAll('.label')
+                .data(graphData.nodes)
+                .enter()
+                .append('text')
+                .attr('class', 'label')
+                .attr('text-anchor', 'middle')
+                .attr('dy', '0.3em')
+                .attr('font-size', d => {
+                    if (d.type === 'service') return '11px';
+                    if (d.type === 'type') return '9px';
+                    return '7px';
+                })
+                .attr('font-weight', d => d.type === 'service' ? 'bold' : 'normal')
+                .attr('fill', '#ffffff')
+                .attr('pointer-events', 'none')
+                .style('text-shadow', '0 0 3px rgba(0,0,0,0.8)')
+                .text(d => d.name);
+
+            // Apply layer filters
+            updateLayerVisibility(g);
+
+            // Handle resize
+            window.addEventListener('resize', () => {
+                const newWidth = window.innerWidth;
+                const newHeight = window.innerHeight;
+                svg.attr('width', newWidth).attr('height', newHeight);
+                vizState.simulation.force('center', d3.forceCenter(newWidth / 2, newHeight / 2));
+                vizState.simulation.alpha(0.3).restart();
+            });
+        }
+
+        function updateLayerVisibility(g) {
+            g.selectAll('.node').style('display', d => {
+                if (d.type === 'service' && !vizState.visibleLayers.services) return 'none';
+                if (d.type === 'type' && !vizState.visibleLayers.types) return 'none';
+                if (d.type === 'resolver' && !vizState.visibleLayers.resolvers) return 'none';
+                return 'block';
+            });
+
+            g.selectAll('.label').style('display', d => {
+                if (d.type === 'service' && !vizState.visibleLayers.services) return 'none';
+                if (d.type === 'type' && !vizState.visibleLayers.types) return 'none';
+                if (d.type === 'resolver' && !vizState.visibleLayers.resolvers) return 'none';
+                return 'block';
+            });
+
+            g.selectAll('.edge').style('display', d => {
+                const sourceNode = graphData.nodes.find(n => n.id === d.source.id || n.id === d.source);
+                const targetNode = graphData.nodes.find(n => n.id === d.target.id || n.id === d.target);
+                
+                if (sourceNode.type === 'service' && !vizState.visibleLayers.services) return 'none';
+                if (sourceNode.type === 'type' && !vizState.visibleLayers.types) return 'none';
+                if (sourceNode.type === 'resolver' && !vizState.visibleLayers.resolvers) return 'none';
+                if (targetNode.type === 'service' && !vizState.visibleLayers.services) return 'none';
+                if (targetNode.type === 'type' && !vizState.visibleLayers.types) return 'none';
+                if (targetNode.type === 'resolver' && !vizState.visibleLayers.resolvers) return 'none';
+                
+                return 'block';
+            });
+        }
+
+        // ============ RESOLVER PANEL ============
+        async function showResolverPanel(node) {
+            vizState.selectedNode = node;
+            const panel = document.getElementById('info-panel');
+            const panelContent = document.getElementById('panel-content');
+            
+            panel.classList.add('visible');
+            
+            document.getElementById('panel-title').textContent = node.name;
+            document.getElementById('panel-subtitle').textContent = 
+                `${node.parentType} • ${node.service}`;
+            
+            panelContent.innerHTML = '<div class="loading"><span class="spinner"></span>Loading resolver flow...</div>';
+
+            try {
+                let flowPath = `./${node.service}/resolver-flows.${node.name}.json`;
+                let response = await fetch(flowPath);
+                
+                // Try alternative path for file:// protocol
+                if (!response.ok && window.location.protocol === 'file:') {
+                    flowPath = `${node.service}/resolver-flows.${node.name}.json`;
+                    response = await fetch(flowPath);
+                }
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: Resolver flow file not found`);
+                }
+                
+                const flowData = await response.json();
+                displayResolverFlow(flowData, node);
+            } catch (error) {
+                panelContent.innerHTML = `<div class="error">Error loading resolver flow: ${error.message}</div>`;
+                console.error('Error fetching resolver flow:', error);
+            }
+        }
+
+        function displayResolverFlow(flowData, node) {
+            const panelContent = document.getElementById('panel-content');
+            
+            // Find the resolver that matches our node
+            let resolver = flowData.resolvers?.find(r => 
+                r.resolver.name === node.name && r.resolver.parentType === node.parentType
+            );
+            
+            // Fallback to first resolver if exact match not found
+            if (!resolver && flowData.resolvers?.length > 0) {
+                resolver = flowData.resolvers[0];
+            }
+            
+            if (!resolver) {
+                panelContent.innerHTML = '<div class="error">Resolver not found in flow data</div>';
+                return;
+            }
+
+            const summary = resolver.summary || {};
+            const functions = resolver.functions || [];
+            const externalPackages = resolver.externalPackages || [];
+            const apiRequests = resolver.apiRequests || [];
+            const databaseCalls = resolver.databaseCalls || [];
+            const classInstantiations = resolver.classInstantiations || [];
+
+            let html = `
+                <div class="section">
+                    <div class="section-title">Summary</div>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-item-label">Functions</div>
+                            <div class="summary-item-value">${summary.functions || 0}</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Externals</div>
+                            <div class="summary-item-value">${summary.externalPackages || 0}</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-item-label">DB Calls</div>
+                            <div class="summary-item-value">${summary.databaseCalls || 0}</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-item-label">Classes</div>
+                            <div class="summary-item-value">${summary.classInstantiations || 0}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            if (functions.length > 0) {
+                html += `
+                    <div class="section">
+                        <div class="section-title">Call Chain (${functions.length})</div>
+                        <div class="item-list">
+                            ${functions.slice(0, 20).map((fn, i) => `
+                                <div class="item-entry" style="cursor: pointer;" onclick="showCodeModal('${escapeHtml(fn.file)}', ${fn.line}, ${fn.lineEnd}, '${escapeHtml(fn.name)}')">
+                                    <div><span class="item-name">${i}. ${fn.name}</span></div>
+                                    <div class="item-file">${getFileBaseName(fn.file)}</div>
+                                    <div class="item-meta">Line ${fn.line}-${fn.lineEnd} <span style="color: #4a9eff; font-size: 10px;">📋 Click to view</span></div>
+                                </div>
+                            `).join('')}
+                            ${functions.length > 20 ? `<div class="item-meta">... and ${functions.length - 20} more</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (externalPackages.length > 0) {
+                html += `
+                    <div class="section">
+                        <div class="section-title">External Packages (${externalPackages.length})</div>
+                        <div class="item-list">
+                            ${externalPackages.slice(0, 15).map(pkg => `
+                                <div class="item-entry">
+                                    <div><span class="item-name">${pkg.packageName}</span></div>
+                                    <div class="item-meta">${pkg.symbol || 'default'}.${pkg.method || 'import'}</div>
+                                </div>
+                            `).join('')}
+                            ${externalPackages.length > 15 ? `<div class="item-meta">... and ${externalPackages.length - 15} more</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (apiRequests.length > 0) {
+                html += `
+                    <div class="section">
+                        <div class="section-title">API Requests (${apiRequests.length})</div>
+                        <div class="item-list">
+                            ${apiRequests.slice(0, 10).map(api => `
+                                <div class="item-entry">
+                                    <div class="item-meta">${api.url || api.urlResolved || 'Unknown'}</div>
+                                </div>
+                            `).join('')}
+                            ${apiRequests.length > 10 ? `<div class="item-meta">... and ${apiRequests.length - 10} more</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (databaseCalls.length > 0) {
+                html += `
+                    <div class="section">
+                        <div class="section-title">Database Calls (${databaseCalls.length})</div>
+                        <div class="item-list">
+                            ${databaseCalls.slice(0, 10).map(db => `
+                                <div class="item-entry">
+                                    <div><span class="item-name">${db.method || 'Unknown'}</span></div>
+                                    <div class="item-file">${getFileBaseName(db.file)}</div>
+                                </div>
+                            `).join('')}
+                            ${databaseCalls.length > 10 ? `<div class="item-meta">... and ${databaseCalls.length - 10} more</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (classInstantiations.length > 0) {
+                html += `
+                    <div class="section">
+                        <div class="section-title">Class Instantiations (${classInstantiations.length})</div>
+                        <div class="item-list">
+                            ${classInstantiations.slice(0, 10).map(cls => `
+                                <div class="item-entry">
+                                    <div><span class="item-name">${cls.className}</span></div>
+                                    <div class="item-file">${getFileBaseName(cls.file)}</div>
+                                </div>
+                            `).join('')}
+                            ${classInstantiations.length > 10 ? `<div class="item-meta">... and ${classInstantiations.length - 10} more</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+
+            document.getElementById('panel-content').innerHTML = html;
+        }
+
+        function getFileBaseName(filePath) {
+            return filePath.split('/').pop();
+        }
+
+        function closePanel() {
+            document.getElementById('info-panel').classList.remove('visible');
+            vizState.selectedNode = null;
+        }
+
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        function showCodeModal(file, startLine, endLine, functionName) {
+            const modal = document.getElementById('code-modal');
+            const codeElement = document.getElementById('code-modal-code');
+            
+            document.getElementById('code-modal-title').textContent = functionName;
+            document.getElementById('code-modal-subtitle').textContent = `${getFileBaseName(file)} (Lines ${startLine}-${endLine})`;
+            
+            // Try to fetch the code from the server
+            fetchFileCode(file, startLine, endLine)
+                .then(code => {
+                    codeElement.textContent = code;
+                    modal.classList.add('visible');
+                })
+                .catch(error => {
+                    codeElement.textContent = `Unable to load code: ${error.message}\n\nFile: ${file}\nLines: ${startLine}-${endLine}`;
+                    modal.classList.add('visible');
+                });
+        }
+
+        function closeCodeModal() {
+            document.getElementById('code-modal').classList.remove('visible');
+        }
+
+        async function fetchFileCode(filePath, startLine, endLine) {
+            try {
+                // Try to fetch from the API endpoint
+                const params = new URLSearchParams({
+                    file: filePath,
+                    start: startLine,
+                    end: endLine
+                });
+                
+                const response = await fetch(`/api/code?${params}`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                
+                // Add line numbers to the code
+                const codeLines = data.code.split('\n');
+                const lineNumberedCode = codeLines
+                    .map((line, i) => {
+                        const lineNum = (startLine + i).toString().padStart(4, ' ');
+                        return `${lineNum} | ${line}`;
+                    })
+                    .join('\n');
+                
+                return lineNumberedCode;
+            } catch (error) {
+                // Fallback: provide helpful message
+                return `Unable to load code: ${error.message}
+
+File: ${filePath}
+Lines: ${startLine}-${endLine}
+
+To view the code, use your editor or terminal:
+  sed -n '${startLine},${endLine}p' "${filePath}"
+
+Make sure you're using the advanced server:
+  python3 serve-docs-advanced.py`;
+            }
+        }
+
+        // ============ CONTROLS ============
+        document.getElementById('toggle-services').addEventListener('change', (e) => {
+            vizState.visibleLayers.services = e.target.checked;
+            const g = d3.select('svg g');
+            updateLayerVisibility(g);
+        });
+
+        document.getElementById('toggle-types').addEventListener('change', (e) => {
+            vizState.visibleLayers.types = e.target.checked;
+            const g = d3.select('svg g');
+            updateLayerVisibility(g);
+        });
+
+        document.getElementById('toggle-resolvers').addEventListener('change', (e) => {
+            vizState.visibleLayers.resolvers = e.target.checked;
+            const g = d3.select('svg g');
+            updateLayerVisibility(g);
+        });
+
+        // Close panel on background click
+        document.getElementById('canvas').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('canvas')) {
+                closePanel();
+            }
+        });
+
+        // ============ INIT ============
+        loadData();
+    </script>
+</body>
+</html>

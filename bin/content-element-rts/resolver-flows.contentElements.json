@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-04-08T13:47:20.825Z",
+  "resolversCount": 2,
+  "resolvers": [
+    {
+      "generatedAt": "2026-04-08T13:47:20.815Z",
+      "resolver": {
+        "name": "contentElements",
+        "parentType": "Page",
+        "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+        "line": 119
+      },
+      "summary": {
+        "functions": 1,
+        "externalPackages": 0,
+        "apiRequests": 0,
+        "databaseCalls": 0,
+        "classInstantiations": 0
+      },
+      "functions": [
+        {
+          "order": 0,
+          "name": "generatePageResolvers",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/general-content-element-resolver.js",
+          "line": 48,
+          "lineEnd": 58,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+            "line": 121
+          }
+        }
+      ],
+      "externalPackages": [],
+      "apiRequests": [],
+      "databaseCalls": [],
+      "classInstantiations": []
+    },
+    {
+      "generatedAt": "2026-04-08T13:47:20.817Z",
+      "resolver": {
+        "name": "contentElements",
+        "parentType": "Widget",
+        "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+        "line": 125
+      },
+      "summary": {
+        "functions": 1,
+        "externalPackages": 0,
+        "apiRequests": 0,
+        "databaseCalls": 0,
+        "classInstantiations": 0
+      },
+      "functions": [
+        {
+          "order": 0,
+          "name": "generateWidgetResolvers",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/general-content-element-resolver.js",
+          "line": 60,
+          "lineEnd": 70,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+            "line": 127
+          }
+        }
+      ],
+      "externalPackages": [],
+      "apiRequests": [],
+      "databaseCalls": [],
+      "classInstantiations": []
+    }
+  ]
+}

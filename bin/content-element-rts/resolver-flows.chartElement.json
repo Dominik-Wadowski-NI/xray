@@ -1,0 +1,618 @@
+{
+  "generatedAt": "2026-04-08T13:47:20.824Z",
+  "resolversCount": 2,
+  "resolvers": [
+    {
+      "generatedAt": "2026-04-08T13:47:20.792Z",
+      "resolver": {
+        "name": "chartElement",
+        "parentType": "ContentElements",
+        "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+        "line": 74
+      },
+      "summary": {
+        "functions": 11,
+        "externalPackages": 16,
+        "apiRequests": 0,
+        "databaseCalls": 1,
+        "classInstantiations": 1
+      },
+      "functions": [
+        {
+          "order": 0,
+          "name": "resolveChartElement",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+          "line": 26,
+          "lineEnd": 60,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+            "line": 77
+          }
+        },
+        {
+          "order": 1,
+          "name": "getChartWithFeatureIdsByName",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/chartElement-service.js",
+          "line": 41,
+          "lineEnd": 49,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+            "line": 35
+          }
+        },
+        {
+          "order": 2,
+          "name": "getContentElementResult",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 16,
+          "lineEnd": 62,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/chartElement-service.js",
+            "line": 42
+          }
+        },
+        {
+          "order": 3,
+          "name": "validateUUID",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 70,
+          "lineEnd": 72,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+            "line": 21
+          }
+        },
+        {
+          "order": 15,
+          "name": "getChartFeatureIdsByName",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+          "line": 27,
+          "lineEnd": 39,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/chartElement-service.js",
+            "line": 45
+          }
+        },
+        {
+          "order": 16,
+          "name": "_getAccordionFeatureIds",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+          "line": 41,
+          "lineEnd": 55,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+            "line": 33
+          }
+        },
+        {
+          "order": 17,
+          "name": "_getSoaProductFeatureId",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+          "line": 57,
+          "lineEnd": 64,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+            "line": 36
+          }
+        },
+        {
+          "order": 18,
+          "name": "getProductFeatureByTypeAndVerticalId",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 21,
+          "lineEnd": 33,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+            "line": 58
+          }
+        },
+        {
+          "order": 19,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 9,
+          "lineEnd": 11,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+            "line": 22
+          }
+        },
+        {
+          "order": 27,
+          "name": "getData",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/filter-service.js",
+          "line": 57,
+          "lineEnd": 59,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+            "line": 36
+          }
+        },
+        {
+          "order": 28,
+          "name": "getContentElementResult",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 16,
+          "lineEnd": 62,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/filter-service.js",
+            "line": 58
+          }
+        }
+      ],
+      "externalPackages": [
+        {
+          "order": 4,
+          "package": "bson",
+          "symbol": "mongoose",
+          "method": "isValid",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/node_modules/bson/bson.d.ts",
+          "line": 1057,
+          "snippet": "mongoose.Types.ObjectId.isValid(uuid.toString())"
+        },
+        {
+          "order": 5,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "warn",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 22,
+          "snippet": "logger.warn(\n        `getContentElementResult - Did not find a site data for a ${contentElementNa..."
+        },
+        {
+          "order": 6,
+          "package": "unknown",
+          "symbol": "response",
+          "method": "setAsError",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 25,
+          "snippet": "response.setAsError(coreConstants.errorCodes.exception, [], null, null)"
+        },
+        {
+          "order": 7,
+          "package": "unknown",
+          "symbol": "manipulatorHelper",
+          "method": "getContentElementManipulation",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 28,
+          "snippet": "manipulatorHelper.getContentElementManipulation(contextId, contentElementId)"
+        },
+        {
+          "order": 8,
+          "package": "unknown",
+          "symbol": "response",
+          "method": "setAsError",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 33,
+          "snippet": "response.setAsError(\n        errorConstants.errorCodes.resource_not_found,\n        [],\n        nu..."
+        },
+        {
+          "order": 9,
+          "package": "unknown",
+          "symbol": "ServiceResult",
+          "method": "getSuccessResult",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 41,
+          "snippet": "ServiceResult.getSuccessResult('Model data retrieved successfully', contentElement)"
+        },
+        {
+          "order": 10,
+          "package": "unknown",
+          "symbol": "contentElementManipulator",
+          "method": "hasManipulators",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 46,
+          "snippet": "contentElementManipulator.hasManipulators()"
+        },
+        {
+          "order": 11,
+          "package": "unknown",
+          "symbol": "manipulatorHelper",
+          "method": "markManipulationAsUsed",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 48,
+          "snippet": "manipulatorHelper.markManipulationAsUsed(contentElementManipulator)"
+        },
+        {
+          "order": 12,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 53,
+          "snippet": "logger.error(\n      `getContentElementResult - Model data failed to retrieve - returned response...."
+        },
+        {
+          "order": 13,
+          "package": "unknown",
+          "symbol": "response",
+          "method": "setAsError",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 60,
+          "snippet": "response.setAsError(coreConstants.errorCodes.exception, [], err, err.toString())"
+        },
+        {
+          "order": 20,
+          "package": "unknown",
+          "symbol": "connectionHelper",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 10,
+          "snippet": "connectionHelper.connectionShim()"
+        },
+        {
+          "order": 22,
+          "package": "unknown",
+          "symbol": "model",
+          "method": "lean",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 26,
+          "snippet": "model.findOne(query).select(fields).lean()"
+        },
+        {
+          "order": 23,
+          "package": "unknown",
+          "symbol": "model",
+          "method": "select",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 26,
+          "snippet": "model.findOne(query).select(fields)"
+        },
+        {
+          "order": 24,
+          "package": "unknown",
+          "symbol": "model",
+          "method": "findOne",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 26,
+          "snippet": "model.findOne(query)"
+        },
+        {
+          "order": 25,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 28,
+          "snippet": "logger.error(\n      `getProductFeatureByTypeAndVerticalId - Failed retrieving feature with type: ..."
+        },
+        {
+          "order": 26,
+          "package": "unknown",
+          "symbol": "ServiceResult",
+          "method": "getSuccessResult",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/chartElement-service.js",
+          "line": 46,
+          "snippet": "ServiceResult.getSuccessResult('chart data retrieved successfully', { ...chartElement, productFea..."
+        }
+      ],
+      "apiRequests": [],
+      "databaseCalls": [
+        {
+          "order": 21,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 10,
+          "snippet": "connection.model(entityType)"
+        }
+      ],
+      "classInstantiations": [
+        {
+          "order": 14,
+          "className": "ServiceResult",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 17,
+          "definitionFile": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js"
+        }
+      ]
+    },
+    {
+      "generatedAt": "2026-04-08T13:47:20.823Z",
+      "resolver": {
+        "name": "chartElement",
+        "parentType": "Query",
+        "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+        "line": 136
+      },
+      "summary": {
+        "functions": 11,
+        "externalPackages": 16,
+        "apiRequests": 0,
+        "databaseCalls": 1,
+        "classInstantiations": 1
+      },
+      "functions": [
+        {
+          "order": 0,
+          "name": "resolveChartElement",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+          "line": 26,
+          "lineEnd": 60,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+            "line": 136
+          }
+        },
+        {
+          "order": 1,
+          "name": "getChartWithFeatureIdsByName",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/chartElement-service.js",
+          "line": 41,
+          "lineEnd": 49,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+            "line": 35
+          }
+        },
+        {
+          "order": 2,
+          "name": "getContentElementResult",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 16,
+          "lineEnd": 62,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/chartElement-service.js",
+            "line": 42
+          }
+        },
+        {
+          "order": 3,
+          "name": "validateUUID",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 70,
+          "lineEnd": 72,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+            "line": 21
+          }
+        },
+        {
+          "order": 15,
+          "name": "getChartFeatureIdsByName",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+          "line": 27,
+          "lineEnd": 39,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/chartElement-service.js",
+            "line": 45
+          }
+        },
+        {
+          "order": 16,
+          "name": "_getAccordionFeatureIds",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+          "line": 41,
+          "lineEnd": 55,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+            "line": 33
+          }
+        },
+        {
+          "order": 17,
+          "name": "_getSoaProductFeatureId",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+          "line": 57,
+          "lineEnd": 64,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+            "line": 36
+          }
+        },
+        {
+          "order": 18,
+          "name": "getProductFeatureByTypeAndVerticalId",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 21,
+          "lineEnd": 33,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/chart-element-product-features-helper.js",
+            "line": 58
+          }
+        },
+        {
+          "order": 19,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 9,
+          "lineEnd": 11,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+            "line": 22
+          }
+        },
+        {
+          "order": 27,
+          "name": "getData",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/filter-service.js",
+          "line": 57,
+          "lineEnd": 59,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+            "line": 36
+          }
+        },
+        {
+          "order": 28,
+          "name": "getContentElementResult",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 16,
+          "lineEnd": 62,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/filter-service.js",
+            "line": 58
+          }
+        }
+      ],
+      "externalPackages": [
+        {
+          "order": 4,
+          "package": "bson",
+          "symbol": "mongoose",
+          "method": "isValid",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/node_modules/bson/bson.d.ts",
+          "line": 1057,
+          "snippet": "mongoose.Types.ObjectId.isValid(uuid.toString())"
+        },
+        {
+          "order": 5,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "warn",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 22,
+          "snippet": "logger.warn(\n        `getContentElementResult - Did not find a site data for a ${contentElementNa..."
+        },
+        {
+          "order": 6,
+          "package": "unknown",
+          "symbol": "response",
+          "method": "setAsError",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 25,
+          "snippet": "response.setAsError(coreConstants.errorCodes.exception, [], null, null)"
+        },
+        {
+          "order": 7,
+          "package": "unknown",
+          "symbol": "manipulatorHelper",
+          "method": "getContentElementManipulation",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 28,
+          "snippet": "manipulatorHelper.getContentElementManipulation(contextId, contentElementId)"
+        },
+        {
+          "order": 8,
+          "package": "unknown",
+          "symbol": "response",
+          "method": "setAsError",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 33,
+          "snippet": "response.setAsError(\n        errorConstants.errorCodes.resource_not_found,\n        [],\n        nu..."
+        },
+        {
+          "order": 9,
+          "package": "unknown",
+          "symbol": "ServiceResult",
+          "method": "getSuccessResult",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 41,
+          "snippet": "ServiceResult.getSuccessResult('Model data retrieved successfully', contentElement)"
+        },
+        {
+          "order": 10,
+          "package": "unknown",
+          "symbol": "contentElementManipulator",
+          "method": "hasManipulators",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 46,
+          "snippet": "contentElementManipulator.hasManipulators()"
+        },
+        {
+          "order": 11,
+          "package": "unknown",
+          "symbol": "manipulatorHelper",
+          "method": "markManipulationAsUsed",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 48,
+          "snippet": "manipulatorHelper.markManipulationAsUsed(contentElementManipulator)"
+        },
+        {
+          "order": 12,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 53,
+          "snippet": "logger.error(\n      `getContentElementResult - Model data failed to retrieve - returned response...."
+        },
+        {
+          "order": 13,
+          "package": "unknown",
+          "symbol": "response",
+          "method": "setAsError",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 60,
+          "snippet": "response.setAsError(coreConstants.errorCodes.exception, [], err, err.toString())"
+        },
+        {
+          "order": 20,
+          "package": "unknown",
+          "symbol": "connectionHelper",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 10,
+          "snippet": "connectionHelper.connectionShim()"
+        },
+        {
+          "order": 22,
+          "package": "unknown",
+          "symbol": "model",
+          "method": "lean",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 26,
+          "snippet": "model.findOne(query).select(fields).lean()"
+        },
+        {
+          "order": 23,
+          "package": "unknown",
+          "symbol": "model",
+          "method": "select",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 26,
+          "snippet": "model.findOne(query).select(fields)"
+        },
+        {
+          "order": 24,
+          "package": "unknown",
+          "symbol": "model",
+          "method": "findOne",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 26,
+          "snippet": "model.findOne(query)"
+        },
+        {
+          "order": 25,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 28,
+          "snippet": "logger.error(\n      `getProductFeatureByTypeAndVerticalId - Failed retrieving feature with type: ..."
+        },
+        {
+          "order": 26,
+          "package": "unknown",
+          "symbol": "ServiceResult",
+          "method": "getSuccessResult",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/services/chartElement-service.js",
+          "line": 46,
+          "snippet": "ServiceResult.getSuccessResult('chart data retrieved successfully', { ...chartElement, productFea..."
+        }
+      ],
+      "apiRequests": [],
+      "databaseCalls": [
+        {
+          "order": 21,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/repositories/product-feature-repository.js",
+          "line": 10,
+          "snippet": "connection.model(entityType)"
+        }
+      ],
+      "classInstantiations": [
+        {
+          "order": 14,
+          "className": "ServiceResult",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js",
+          "line": 17,
+          "definitionFile": "/Users/dominikwadowski/ni/services/content-element-rts/lib/helpers/content-element-service-helper.js"
+        }
+      ]
+    }
+  ]
+}

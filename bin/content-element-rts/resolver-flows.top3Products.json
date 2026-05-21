@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-04-08T13:47:20.825Z",
+  "resolversCount": 1,
+  "resolvers": [
+    {
+      "generatedAt": "2026-04-08T13:47:20.812Z",
+      "resolver": {
+        "name": "top3Products",
+        "parentType": "ContentElements",
+        "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+        "line": 101
+      },
+      "summary": {
+        "functions": 0,
+        "externalPackages": 1,
+        "apiRequests": 0,
+        "databaseCalls": 0,
+        "classInstantiations": 0
+      },
+      "functions": [],
+      "externalPackages": [
+        {
+          "order": 0,
+          "package": "unknown",
+          "symbol": "contentElementsResolvers",
+          "method": "top3Products",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+          "line": 102,
+          "snippet": "contentElementsResolvers.top3Products(...args)"
+        }
+      ],
+      "apiRequests": [],
+      "databaseCalls": [],
+      "classInstantiations": []
+    }
+  ]
+}

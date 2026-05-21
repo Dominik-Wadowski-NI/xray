@@ -1,0 +1,117 @@
+{
+  "resolvers": [
+    {
+      "name": "chartElementFromRapido",
+      "parentType": "ContentElements",
+      "params": [
+        {
+          "name": "parent",
+          "type": "any"
+        },
+        {
+          "name": "args",
+          "type": "any"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+      "line": 67,
+      "column": 2092
+    },
+    {
+      "name": "chartElement",
+      "parentType": "ContentElements",
+      "params": [
+        {
+          "name": "parent",
+          "type": "any"
+        },
+        {
+          "name": "args",
+          "type": "any"
+        },
+        {
+          "name": "context",
+          "type": "any"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+      "line": 74,
+      "column": 2258
+    },
+    {
+      "name": "miniReviews",
+      "parentType": "ContentElements",
+      "params": [
+        {
+          "name": "args",
+          "type": "any[]"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+      "line": 81,
+      "column": 2700
+    },
+    {
+      "name": "top3Products",
+      "parentType": "ContentElements",
+      "params": [
+        {
+          "name": "args",
+          "type": "any[]"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+      "line": 101,
+      "column": 3463
+    },
+    {
+      "name": "contentElements",
+      "parentType": "Page",
+      "params": [
+        {
+          "name": "page",
+          "type": "any"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+      "line": 119,
+      "column": 3946
+    },
+    {
+      "name": "contentElements",
+      "parentType": "Widget",
+      "params": [
+        {
+          "name": "widget",
+          "type": "any"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+      "line": 125,
+      "column": 4064
+    },
+    {
+      "name": "chartElement",
+      "parentType": "Query",
+      "params": [
+        {
+          "name": "parent",
+          "type": "any"
+        },
+        {
+          "name": "args",
+          "type": "{}"
+        },
+        {
+          "name": "context",
+          "type": "{}"
+        }
+      ],
+      "definitionFile": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+      "line": 136,
+      "column": 4330
+    }
+  ],
+  "generatedAt": "2026-04-08T13:27:12.829Z",
+  "resolverFile": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js"
+}

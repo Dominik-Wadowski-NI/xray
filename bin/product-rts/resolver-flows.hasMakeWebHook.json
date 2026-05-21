@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-04-08T13:19:29.391Z",
+  "resolversCount": 1,
+  "resolvers": [
+    {
+      "generatedAt": "2026-04-08T13:19:29.225Z",
+      "resolver": {
+        "name": "hasMakeWebHook",
+        "parentType": "Product",
+        "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+        "line": 794
+      },
+      "summary": {
+        "functions": 0,
+        "externalPackages": 0,
+        "apiRequests": 0,
+        "databaseCalls": 0,
+        "classInstantiations": 0
+      },
+      "functions": [],
+      "externalPackages": [],
+      "apiRequests": [],
+      "databaseCalls": [],
+      "classInstantiations": []
+    }
+  ]
+}

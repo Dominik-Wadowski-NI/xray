@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-04-08T13:47:20.823Z",
+  "resolversCount": 1,
+  "resolvers": [
+    {
+      "generatedAt": "2026-04-08T13:47:20.740Z",
+      "resolver": {
+        "name": "chartElementFromRapido",
+        "parentType": "ContentElements",
+        "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+        "line": 67
+      },
+      "summary": {
+        "functions": 0,
+        "externalPackages": 0,
+        "apiRequests": 0,
+        "databaseCalls": 0,
+        "classInstantiations": 0
+      },
+      "functions": [],
+      "externalPackages": [],
+      "apiRequests": [],
+      "databaseCalls": [],
+      "classInstantiations": []
+    }
+  ]
+}

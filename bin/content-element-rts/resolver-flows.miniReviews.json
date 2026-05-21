@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-04-08T13:47:20.825Z",
+  "resolversCount": 1,
+  "resolvers": [
+    {
+      "generatedAt": "2026-04-08T13:47:20.810Z",
+      "resolver": {
+        "name": "miniReviews",
+        "parentType": "ContentElements",
+        "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+        "line": 81
+      },
+      "summary": {
+        "functions": 0,
+        "externalPackages": 1,
+        "apiRequests": 0,
+        "databaseCalls": 0,
+        "classInstantiations": 0
+      },
+      "functions": [],
+      "externalPackages": [
+        {
+          "order": 0,
+          "package": "unknown",
+          "symbol": "contentElementsResolvers",
+          "method": "miniReviews",
+          "file": "/Users/dominikwadowski/ni/services/content-element-rts/lib/graphql/resolvers/resolvers.js",
+          "line": 82,
+          "snippet": "contentElementsResolvers.miniReviews(...args)"
+        }
+      ],
+      "apiRequests": [],
+      "databaseCalls": [],
+      "classInstantiations": []
+    }
+  ]
+}

@@ -1,0 +1,2591 @@
+{
+  "generatedAt": "2026-04-08T09:44:09.002Z",
+  "rootDir": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts",
+  "summary": {
+    "platform": {
+      "callSiteCount": 157,
+      "packages": [
+        "ni-http-server",
+        "ni-node-configuration",
+        "ni-feature-entity-provider-rt",
+        "ni-rts-helper",
+        "xsite-modern-context",
+        "ni-chart-rt",
+        "ni-feature-toggle",
+        "ni-manipulator",
+        "ni-service-contracts"
+      ]
+    },
+    "cache": {
+      "callSiteCount": 13,
+      "packages": [
+        "xsite-ni-shared-cache",
+        "ni-cache"
+      ]
+    },
+    "http": {
+      "callSiteCount": 5,
+      "packages": [
+        "ni-http",
+        "axios"
+      ]
+    },
+    "database": {
+      "callSiteCount": 16,
+      "packages": [
+        "ni-entities",
+        "ni-core-entities-provider-rt",
+        "xsite-data-access-mongo"
+      ]
+    },
+    "events": {
+      "callSiteCount": 11,
+      "packages": [
+        "@products-monorepo/utils"
+      ]
+    },
+    "vendors": {
+      "callSiteCount": 4,
+      "packages": [
+        "@ni-products/vendors"
+      ]
+    },
+    "discovery": {
+      "callSiteCount": 2,
+      "packages": [
+        "ni-discovery-service"
+      ]
+    }
+  },
+  "callSites": [
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "getApplicationName",
+      "file": "../../packages/cache/src/cache.ts",
+      "line": 8,
+      "column": 245,
+      "snippet": "config.getApplicationName()"
+    },
+    {
+      "category": "cache",
+      "package": "xsite-ni-shared-cache",
+      "symbol": "CacheFactory",
+      "method": "createCache",
+      "file": "../../packages/cache/src/cache.ts",
+      "line": 23,
+      "column": 692,
+      "snippet": "CacheFactory.createCache('redis', { client: cdnRedisClient, ttl })"
+    },
+    {
+      "category": "cache",
+      "package": "xsite-ni-shared-cache",
+      "symbol": "SharedCache",
+      "method": "initialize",
+      "file": "../../packages/cache/src/cache.ts",
+      "line": 27,
+      "column": 802,
+      "snippet": "SharedCache.initialize(PRODUCTS_MONOREPO_VENDORS, stores)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/cache/src/redis-client.ts",
+      "line": 7,
+      "column": 192,
+      "snippet": "config.get('aws')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors-handler.ts",
+      "line": 40,
+      "column": 1247,
+      "snippet": "config.get('vendorResponseCache')"
+    },
+    {
+      "category": "vendors",
+      "package": "@ni-products/vendors",
+      "symbol": "PAYMENT_ERROR_MESSAGES",
+      "method": "VENDOR_NOT_SUPPORTED",
+      "file": "../../packages/vendors/src/vendors-handler.ts",
+      "line": 120,
+      "column": 3641,
+      "snippet": "PAYMENT_ERROR_MESSAGES.VENDOR_NOT_SUPPORTED(vendorName)"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/register-schemas.ts",
+      "line": 8,
+      "column": 274,
+      "snippet": "connectionHelper.connectionShim(true)"
+    },
+    {
+      "category": "cache",
+      "package": "ni-cache",
+      "symbol": "cache",
+      "method": "call",
+      "file": "../../packages/vendors/src/pet-insurance/pet-insurance-utils.ts",
+      "line": 28,
+      "column": 815,
+      "snippet": "cache(\n    async () => {\n      const requestHelper = new RequestHelper();\n      return requestHelper.get(BREEDS_MAP_URL, {});\n    },\n    { maxAge: 1000 * 60 * 60 * 24 }\n  )"
+    },
+    {
+      "category": "http",
+      "package": "ni-http",
+      "symbol": "requestHelper",
+      "method": "get",
+      "file": "../../packages/vendors/src/pet-insurance/pet-insurance-utils.ts",
+      "line": 31,
+      "column": 902,
+      "snippet": "requestHelper.get(BREEDS_MAP_URL, {})",
+      "url": "BREEDS_MAP_URL",
+      "urlResolved": false
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/pet-insurance/pet-insurance-utils.ts",
+      "line": 65,
+      "column": 1689,
+      "snippet": "config.get('breedsApi')"
+    },
+    {
+      "category": "cache",
+      "package": "ni-cache",
+      "symbol": "cache",
+      "method": "call",
+      "file": "../../packages/vendors/src/pet-insurance/pet-insurance-utils.ts",
+      "line": 75,
+      "column": 1980,
+      "snippet": "cache(\n    async () => {\n      const requestHelper = new RequestHelper();\n      const niCacheKey = generateCacheKey(BREEDS_CACHE_PREFIX, {\n        species,\n        name: breedName,\n        vendorShort..."
+    },
+    {
+      "category": "http",
+      "package": "ni-http",
+      "symbol": "requestHelper",
+      "method": "get",
+      "file": "../../packages/vendors/src/pet-insurance/pet-insurance-utils.ts",
+      "line": 85,
+      "column": 2291,
+      "snippet": "requestHelper.get(urlPath, {\n        Authorization: bearerToken,\n        'ni-cache-key': niCacheKey,\n      })",
+      "url": "urlPath",
+      "urlResolved": false
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/abstract-fetcher.ts",
+      "line": 19,
+      "column": 836,
+      "snippet": "config.get('vendorResponseCache')"
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/abstract-fetcher.ts",
+      "line": 57,
+      "column": 2632,
+      "snippet": "sendEvent(\n      {\n        logger: this.logger,\n        entityName: eventName,\n        payload: payloadWithReplacedPiiData,\n        action: FETCH_VENDOR_PRODUCT_ACTION,\n        eventContext,\n      },\n..."
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/abstract-fetcher.ts",
+      "line": 76,
+      "column": 3108,
+      "snippet": "config.get('vendorResponseCache')"
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/abstract-result.ts",
+      "line": 42,
+      "column": 1293,
+      "snippet": "sendEvent({\n      logger: this.logger,\n      entityName: UNKNOWN_PRODUCTS_ENTITY_NAME,\n      payload: { products: unknownProductsData, vendor: vendorName },\n      action: UNKNOWN_PRODUCTS_ACTION,\n    ..."
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/abstract-result.ts",
+      "line": 63,
+      "column": 2004,
+      "snippet": "sendEvent(\n      {\n        logger: this.logger,\n        entityName: BIDDING_VENDOR_PRODUCTS_ENTITY_NAME,\n        payload: { products: parsedProducts || products, bid_source: bidSource },\n        actio..."
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/utils.ts",
+      "line": 164,
+      "column": 4252,
+      "snippet": "sendEvent({\n      logger,\n      entityName: 'lead-submission',\n      payload: {\n        lead_id: leadId,\n        vendor_api: vendorType,\n        data_url: `${host}${path}`,\n        product_id: product..."
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "lib/controllers/graphql.ts",
+      "line": 14,
+      "column": 648,
+      "snippet": "config.get('apolloKey')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "lib/controllers/graphql.ts",
+      "line": 15,
+      "column": 700,
+      "snippet": "config.get('apolloGraphRef')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "lib/controllers/graphql.ts",
+      "line": 22,
+      "column": 861,
+      "snippet": "config.get('apolloMaxAgeCache')"
+    },
+    {
+      "category": "database",
+      "package": "xsite-data-access-mongo",
+      "symbol": "mongodbHelper",
+      "method": "getMongoServerStatus",
+      "file": "lib/controllers/servicecheck-controller.ts",
+      "line": 12,
+      "column": 372,
+      "snippet": "mongodbHelper\n      // .getMongoServerStatus(niEntities.constants.singular.rt.productListComposition)\n      .getMongoServerStatus(niEntities.constants.singular.rt.product)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/helpers/battle-events.ts",
+      "line": 33,
+      "column": 906,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "lib/helpers/battle-events.ts",
+      "line": 80,
+      "column": 2187,
+      "snippet": "sendEvent({\n      logger,\n      entityName: VENDOR_BATTLE_RESULTS_ENTITY_NAME,\n      action: VENDOR_BATTLE_RESULTS_ACTION,\n      payload: {\n        ...data,\n      },\n      eventContext,\n    })"
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "lib/helpers/payment-events.ts",
+      "line": 29,
+      "column": 734,
+      "snippet": "sendEvent(\n      {\n        logger,\n        entityName: PAYMENT_RAW_ENTITY_NAME,\n        payload,\n        action: PAYMENT_RAW_ACTION,\n        eventContext,\n      },\n      {\n        trackEvents: options..."
+    },
+    {
+      "category": "platform",
+      "package": "ni-chart-rt",
+      "symbol": "isPhoneScheduled",
+      "method": "call",
+      "file": "lib/helpers/phone-number-adapter.ts",
+      "line": 5,
+      "column": 282,
+      "snippet": "isPhoneScheduled(product)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "lib/helpers/s2s-sale-postback.ts",
+      "line": 37,
+      "column": 1040,
+      "snippet": "config.get(S2S_SALE_POSTBACK_CONFIG_KEY.URL)"
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "lib/helpers/stripe-events.ts",
+      "line": 26,
+      "column": 814,
+      "snippet": "sendEvent({\n      logger,\n      entityName: STRIPE_EVENT_NAMES.STRIPE_TOKEN,\n      action: STRIPE_EVENT_ACTIONS.TOKEN_RECEIVED,\n      payload: {\n        uid: eventContext.uid,\n        iid: eventContex..."
+    },
+    {
+      "category": "vendors",
+      "package": "@ni-products/vendors",
+      "symbol": "LEMONADE_STRIPE_PAYMENT_LOG_MESSAGES",
+      "method": "PRODUCT_NOT_FOUND",
+      "file": "lib/helpers/stripe-payment-helpers.ts",
+      "line": 73,
+      "column": 2111,
+      "snippet": "LEMONADE_STRIPE_PAYMENT_LOG_MESSAGES.PRODUCT_NOT_FOUND(productId)"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/auto-bid-repository.ts",
+      "line": 18,
+      "column": 510,
+      "snippet": "connectionHelper\n    .connectionShim(isNonNiModel)"
+    },
+    {
+      "category": "cache",
+      "package": "ni-cache",
+      "symbol": "cache",
+      "method": "call",
+      "file": "lib/repositories/auto-bid-repository.ts",
+      "line": 28,
+      "column": 850,
+      "snippet": "cache(findAutoBid, {\n  maxAge: 1000 * 60 * 60 * 24, // Cache for 24 hours\n  normalizer: (args: [MongooseModel, AutoBidQuery]) => JSON.stringify(args[1]),\n})"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/integration-config-repository.ts",
+      "line": 38,
+      "column": 1264,
+      "snippet": "connectionHelper.connectionShim(true)"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/link-contexts-repository.ts",
+      "line": 16,
+      "column": 505,
+      "snippet": "connectionHelper.connectionShim()"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/links-repository.ts",
+      "line": 24,
+      "column": 658,
+      "snippet": "connectionHelper.connectionShim()"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/long-list-filtering-repository.ts",
+      "line": 16,
+      "column": 522,
+      "snippet": "connectionHelper\n    .connectionShim()"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/master-products-repository.ts",
+      "line": 23,
+      "column": 786,
+      "snippet": "connectionHelper.connectionShim()"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/repositories/master-products-repository.ts",
+      "line": 33,
+      "column": 1150,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/position-attributes-repository.ts",
+      "line": 20,
+      "column": 630,
+      "snippet": "connectionHelper\n    .connectionShim(true)"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/product-feature-repository.ts",
+      "line": 21,
+      "column": 677,
+      "snippet": "connectionHelper.connectionShim()"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/repositories/product-feature-repository.ts",
+      "line": 31,
+      "column": 1040,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/product-feature-value-groups-repository.ts",
+      "line": 22,
+      "column": 778,
+      "snippet": "connectionHelper\n    .connectionShim(true)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/repositories/product-feature-value-groups-repository.ts",
+      "line": 41,
+      "column": 1514,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/product-feature-values-repository.ts",
+      "line": 27,
+      "column": 940,
+      "snippet": "connectionHelper\n    .connectionShim()"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/repositories/product-feature-values-repository.ts",
+      "line": 47,
+      "column": 1675,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/repositories/product-feature-values-repository.ts",
+      "line": 78,
+      "column": 2559,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/product-list-compositions-repository.ts",
+      "line": 29,
+      "column": 937,
+      "snippet": "connectionHelper\n    .connectionShim()"
+    },
+    {
+      "category": "discovery",
+      "package": "ni-discovery-service",
+      "symbol": "niDiscoveryService",
+      "method": "getUrlFromServiceName",
+      "file": "lib/repositories/product-score-repository.ts",
+      "line": 15,
+      "column": 520,
+      "snippet": "niDiscoveryService.getUrlFromServiceName(PRODUCT_SCORING_SERVICE_NAME)"
+    },
+    {
+      "category": "http",
+      "package": "ni-http",
+      "symbol": "requestHelper",
+      "method": "post",
+      "file": "lib/repositories/product-score-repository.ts",
+      "line": 26,
+      "column": 956,
+      "snippet": "requestHelper.post(\n      `${scoringServiceURL}/api/v2/score`,\n      {},\n      {\n        model,\n        products,\n        context,\n        options,\n      },\n      true,\n      { timeout: REQUESTS_TIMEO...",
+      "url": "`${scoringServiceURL}/api/v2/score`",
+      "urlResolved": false
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/repositories/product-score-repository.ts",
+      "line": 43,
+      "column": 1439,
+      "snippet": "getModernContextLogger(get(options, 'contextId', undefined))"
+    },
+    {
+      "category": "discovery",
+      "package": "ni-discovery-service",
+      "symbol": "niDiscoveryService",
+      "method": "getUrlFromServiceName",
+      "file": "lib/repositories/product-unified-score-repository.ts",
+      "line": 19,
+      "column": 517,
+      "snippet": "niDiscoveryService.getUrlFromServiceName(PRODUCT_SCORING_SERVICE_NAME)"
+    },
+    {
+      "category": "http",
+      "package": "ni-http",
+      "symbol": "requestHelper",
+      "method": "post",
+      "file": "lib/repositories/product-unified-score-repository.ts",
+      "line": 35,
+      "column": 1096,
+      "snippet": "requestHelper.post(\n      `${scoringServiceURL}/api/v1/unified-products-scoring`,\n      {},\n      payload,\n      true,\n      { timeout: REQUESTS_TIMEOUT, resolveWithFullResponse: true, time: true } as...",
+      "url": "`${scoringServiceURL}/api/v1/unified-products-scoring`",
+      "urlResolved": false
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/repositories/product-unified-score-repository.ts",
+      "line": 47,
+      "column": 1503,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/repositories/product-unified-score-repository.ts",
+      "line": 65,
+      "column": 2046,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "cache",
+      "package": "ni-cache",
+      "symbol": "cache",
+      "method": "call",
+      "file": "lib/repositories/product-unified-score-repository.ts",
+      "line": 120,
+      "column": 3651,
+      "snippet": "cache(getProductsUnifiedScore, {\n  maxAge: 4 * 60 * 1000,\n  normalizer: ([{ verticalId, productIds, pliSegmentId, segmentId, top3ProductIds }]: [ProductScoringData]) =>\n    `${verticalId}_${productIds..."
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/products-repository.ts",
+      "line": 29,
+      "column": 914,
+      "snippet": "connectionHelper\n    .connectionShim()"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/repositories/products-repository.ts",
+      "line": 47,
+      "column": 1488,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/segments-repository.ts",
+      "line": 20,
+      "column": 580,
+      "snippet": "connectionHelper\n    .connectionShim()"
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbol": "connectionHelper",
+      "method": "connectionShim",
+      "file": "lib/repositories/vertical-repository.ts",
+      "line": 20,
+      "column": 585,
+      "snippet": "connectionHelper\n    .connectionShim()"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "getContentManipulation",
+      "file": "lib/resolvers/position-attributes-resolver.ts",
+      "line": 57,
+      "column": 1980,
+      "snippet": "manipulatorHelper.getContentManipulation(\n    contextId,\n    constantsEntities.entityTypes.POSITION_ATTRUBUTES\n  )"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "markManipulationAsUsed",
+      "file": "lib/resolvers/position-attributes-resolver.ts",
+      "line": 69,
+      "column": 2391,
+      "snippet": "manipulatorHelper.markManipulationAsUsed({ ...manipulation, manipulators: [manipulator] })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "getAddOnManipulation",
+      "file": "lib/resolvers/product-addons-resolver.ts",
+      "line": 33,
+      "column": 855,
+      "snippet": "manipulatorHelper.getAddOnManipulation(contextId, productIds, positionByProductId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "markManipulationAsUsed",
+      "file": "lib/resolvers/product-addons-resolver.ts",
+      "line": 164,
+      "column": 5112,
+      "snippet": "manipulatorHelper.markManipulationAsUsed(addOnsManipulation)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "getProductFeatureValueOverrideManipulation",
+      "file": "lib/resolvers/product-feature-value-resolver.ts",
+      "line": 113,
+      "column": 4452,
+      "snippet": "manipulatorHelper.getProductFeatureValueOverrideManipulation(contextId, productIds, productFeatureIds, {\n          productPositionsByIdMap,\n        })"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/product-feature-value-resolver.ts",
+      "line": 137,
+      "column": 5381,
+      "snippet": "getModernContextLogger()"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "getLinkManipulation",
+      "file": "lib/resolvers/product-link-resolver.ts",
+      "line": 30,
+      "column": 1313,
+      "snippet": "manipulatorHelper.getLinkManipulation(contextId, productIds, productPositionsById, {\n    linkType: rulesConstants.linkTypes.link.label,\n  })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "getLinkManipulation",
+      "file": "lib/resolvers/product-link-resolver.ts",
+      "line": 33,
+      "column": 1483,
+      "snippet": "manipulatorHelper.getLinkManipulation(contextId, productIds, productPositionsById, {\n    linkType: rulesConstants.linkTypes.phone.label,\n  })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "markManipulationAsUsed",
+      "file": "lib/resolvers/product-link-resolver.ts",
+      "line": 157,
+      "column": 6397,
+      "snippet": "manipulatorHelper.markManipulationAsUsed({ ...linkManipulation, manipulators: sortedUsedManipulators })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-rts-helper",
+      "symbol": "generateAffiliateLink",
+      "method": "call",
+      "file": "lib/resolvers/product-link-resolver.ts",
+      "line": 360,
+      "column": 13207,
+      "snippet": "generateAffiliateLink(legacyId, productListVer, linkId, linkUrl, position, query, linkExtraParams)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/product-link-resolver.ts",
+      "line": 364,
+      "column": 13401,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-chart-rt",
+      "symbol": "evaluateTimes",
+      "method": "call",
+      "file": "lib/resolvers/product-link-resolver.ts",
+      "line": 389,
+      "column": 14225,
+      "snippet": "evaluateTimes(date, product.schedule)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/product-link-resolver.ts",
+      "line": 392,
+      "column": 14328,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "getEmptyPhoneManipulation",
+      "file": "lib/resolvers/product-link-resolver.ts",
+      "line": 462,
+      "column": 16558,
+      "snippet": "manipulatorHelper.getEmptyPhoneManipulation(\n    contextId,\n    productIds,\n    productPositionsById\n  )"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "getProductRestrictionManipulation",
+      "file": "lib/resolvers/product-link-resolver.ts",
+      "line": 477,
+      "column": 16960,
+      "snippet": "manipulatorHelper.getProductRestrictionManipulation(contextId, productIds)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/product-link-resolver.ts",
+      "line": 540,
+      "column": 18748,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/product-list-resolver.ts",
+      "line": 257,
+      "column": 10768,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/product-list-resolver.ts",
+      "line": 338,
+      "column": 13644,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/product-list-resolver.ts",
+      "line": 478,
+      "column": 17724,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/product-list-resolver.ts",
+      "line": 598,
+      "column": 22043,
+      "snippet": "getModernContextLogger(resolveProductListNodeProps.contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "lib/resolvers/product-list-resolver.ts",
+      "line": 1016,
+      "column": 37292,
+      "snippet": "config.get('externalVendorsConfig')"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/integration-config.service.ts",
+      "line": 30,
+      "column": 1136,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "markManipulationAsUsed",
+      "file": "lib/services/product-feature-value-service.ts",
+      "line": 62,
+      "column": 2304,
+      "snippet": "manipulatorHelper.markManipulationAsUsed({ ...productFeatureManipulation, manipulators: appliedManipulators })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "getProductFeatureManipulation",
+      "file": "lib/services/product-feature-value-service.ts",
+      "line": 118,
+      "column": 4463,
+      "snippet": "manipulatorHelper.getProductFeatureManipulation(contextId, productFeatureIds)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "getProductFeatureValueOverrideManipulation",
+      "file": "lib/services/product-feature-value-service.ts",
+      "line": 210,
+      "column": 8074,
+      "snippet": "manipulatorHelper.getProductFeatureValueOverrideManipulation(\n      contextId,\n      productIds,\n      productFeatureIds\n    )"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-feature-value-service.ts",
+      "line": 229,
+      "column": 8812,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-feature-value-service.ts",
+      "line": 281,
+      "column": 10487,
+      "snippet": "getModernContextLogger()"
+    },
+    {
+      "category": "platform",
+      "package": "ni-feature-entity-provider-rt",
+      "symbol": "productFeaturesService",
+      "method": "getProductFeaturesByVerticalAndTypes",
+      "file": "lib/services/product-feature-value-service.ts",
+      "line": 304,
+      "column": 11184,
+      "snippet": "productFeaturesService.getProductFeaturesByVerticalAndTypes(verticalId, featureTypes)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-link-service.ts",
+      "line": 44,
+      "column": 1485,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/product-link-service.ts",
+      "line": 107,
+      "column": 3839,
+      "snippet": "ServiceResult.getSuccessResult('Product links retrieved successfully', productLinks, { cacheResponse })"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-link-service.ts",
+      "line": 110,
+      "column": 4034,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/product-link-service.ts",
+      "line": 149,
+      "column": 5099,
+      "snippet": "ServiceResult.getSuccessResult('Product links resolved successfully', result)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-link-service.ts",
+      "line": 152,
+      "column": 5268,
+      "snippet": "getModernContextLogger()"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "lib/services/product-list-service.ts",
+      "line": 89,
+      "column": 3295,
+      "snippet": "config.get('showAllEnabled')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "lib/services/product-list-service.ts",
+      "line": 90,
+      "column": 3379,
+      "snippet": "config.get('productListCacheTime')"
+    },
+    {
+      "category": "cache",
+      "package": "xsite-ni-shared-cache",
+      "symbol": "SharedCache",
+      "method": "cacheFunction",
+      "file": "lib/services/product-list-service.ts",
+      "line": 92,
+      "column": 3471,
+      "snippet": "SharedCache.cacheFunction(getById, {\n  perCacheOptions: {\n    redis: {\n      enabled: true,\n      ttl: productListCacheTime,\n    },\n    memory: {\n      enabled: false,\n    },\n  },\n  cacheKeyNormalizer..."
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-list-service.ts",
+      "line": 113,
+      "column": 4002,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-list-service.ts",
+      "line": 129,
+      "column": 4480,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/product-list-service.ts",
+      "line": 206,
+      "column": 7775,
+      "snippet": "ServiceResult.getSuccessResult('Model data retrieved successfully', {\n      id,\n      varId,\n      ver,\n      entityType,\n      products,\n      filters,\n      message,\n      sorters,\n      cacheRespon..."
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-list-service.ts",
+      "line": 225,
+      "column": 8188,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/product-list-service.ts",
+      "line": 243,
+      "column": 8887,
+      "snippet": "ServiceResult.getSuccessResult('Model data retrieved successfully', {\n    products,\n    cacheResponse,\n    id,\n    varId,\n    ver,\n    entityType,\n    filters,\n    sorters,\n  })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/product-list-service.ts",
+      "line": 272,
+      "column": 9695,
+      "snippet": "ServiceResult.getSuccessResult('Model data retrieved successfully', {\n    ...productList,\n    products,\n    cacheResponse,\n    filters,\n    sorters,\n  })"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-list-service.ts",
+      "line": 282,
+      "column": 9989,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-list-service.ts",
+      "line": 341,
+      "column": 12603,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/product-list-service.ts",
+      "line": 389,
+      "column": 14118,
+      "snippet": "ServiceResult.getSuccessResult('Model data retrieved successfully', result)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-scores-service.ts",
+      "line": 24,
+      "column": 1148,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-service.ts",
+      "line": 55,
+      "column": 2071,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/product-service.ts",
+      "line": 215,
+      "column": 7160,
+      "snippet": "ServiceResult.getSuccessResult('Model data retrieved successfully', {\n      response: dedupedProducts,\n    })"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-service.ts",
+      "line": 220,
+      "column": 7357,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/product-service.ts",
+      "line": 230,
+      "column": 7798,
+      "snippet": "ServiceResult.getSuccessResult('Products retrieved successfully', products, { cacheResponse })"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-service.ts",
+      "line": 234,
+      "column": 7985,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/product-service.ts",
+      "line": 253,
+      "column": 8696,
+      "snippet": "ServiceResult.getSuccessResult('Products retrieved successfully', result.products)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/services/product-service.ts",
+      "line": 256,
+      "column": 8870,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/product-service.ts",
+      "line": 335,
+      "column": 11811,
+      "snippet": "ServiceResult.getSuccessResult('Model data retrieved successfully', product)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "getProductPromotionPackageManipulation",
+      "file": "lib/services/product-service.ts",
+      "line": 358,
+      "column": 12604,
+      "snippet": "manipulatorHelper.getProductPromotionPackageManipulation(\n    contextId,\n    productId,\n    productPosition\n  )"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "markManipulationAsUsed",
+      "file": "lib/services/product-service.ts",
+      "line": 368,
+      "column": 12944,
+      "snippet": "manipulatorHelper.markManipulationAsUsed(productPromotionPackageManipulation)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbol": "ServiceResult",
+      "method": "getSuccessResult",
+      "file": "lib/services/vendor-products-service.ts",
+      "line": 60,
+      "column": 1997,
+      "snippet": "ServiceResult.getSuccessResult('Model data retrieved successfully', vendorProducts)"
+    },
+    {
+      "category": "cache",
+      "package": "xsite-ni-shared-cache",
+      "symbol": "SharedCache",
+      "method": "cacheFunction",
+      "file": "../../packages/vendors/src/utils/cache/cache.ts",
+      "line": 8,
+      "column": 283,
+      "snippet": "SharedCache.cacheFunction(fn, {\n    perCacheOptions: {\n      redis: {\n        enabled: true,\n        ttl: VENDOR_RESPONSE_TTL_MILLISECONDS,\n      },\n      memory: {\n        enabled: false,\n      },\n  ..."
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/aspca/fetcher.ts",
+      "line": 364,
+      "column": 10974,
+      "snippet": "config.get('aspca')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/aspca/fetcher.ts",
+      "line": 375,
+      "column": 11352,
+      "snippet": "config.get('aspca')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/aspca/result.ts",
+      "line": 102,
+      "column": 3355,
+      "snippet": "config.get('aspca')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/cash-for-cars/fetcher.ts",
+      "line": 64,
+      "column": 1915,
+      "snippet": "config.get('cashForCars')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/deposit-account/fetcher.ts",
+      "line": 50,
+      "column": 1577,
+      "snippet": "config.get('depositAccounts')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/embrace/fetcher.ts",
+      "line": 73,
+      "column": 2565,
+      "snippet": "config.get('embrace')"
+    },
+    {
+      "category": "cache",
+      "package": "ni-cache",
+      "symbol": "cache",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/ethos/fetcher.ts",
+      "line": 20,
+      "column": 825,
+      "snippet": "cache(this.getToken.bind(this), { max: 1, maxAge: 24 * 60 * 60 * 1000 })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/ethos/fetcher.ts",
+      "line": 33,
+      "column": 1223,
+      "snippet": "config.get('ethosAPI')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/ethos/fetcher.ts",
+      "line": 49,
+      "column": 1813,
+      "snippet": "config.get('ethosAPI')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/ethos/fetcher.ts",
+      "line": 69,
+      "column": 2528,
+      "snippet": "config.get('ethosAPI')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/even/config.ts",
+      "line": 6,
+      "column": 221,
+      "snippet": "config.get('even')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/faye/fetcher.ts",
+      "line": 41,
+      "column": 1475,
+      "snippet": "config.get('faye')"
+    },
+    {
+      "category": "cache",
+      "package": "ni-cache",
+      "symbol": "cache",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/fetch/fetcher.ts",
+      "line": 23,
+      "column": 980,
+      "snippet": "cache(this.getToken.bind(this), { maxAge: 1000 * 60 * 59, preFetch: 0.8 })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/fetch/fetcher.ts",
+      "line": 44,
+      "column": 1591,
+      "snippet": "config.get('fetch')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/fetch/fetcher.ts",
+      "line": 94,
+      "column": 3197,
+      "snippet": "config.get('fetch')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/fetch/fetcher.ts",
+      "line": 124,
+      "column": 4167,
+      "snippet": "config.get('fetch')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/fetch/fetcher.ts",
+      "line": 148,
+      "column": 4921,
+      "snippet": "config.get('fetch')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/fetch/result.ts",
+      "line": 155,
+      "column": 5126,
+      "snippet": "config.get('fetch')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/figo/fetcher.ts",
+      "line": 43,
+      "column": 1497,
+      "snippet": "config.get('figo')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/figure/config.ts",
+      "line": 5,
+      "column": 155,
+      "snippet": "config.get('figure')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/fundera/config.ts",
+      "line": 5,
+      "column": 161,
+      "snippet": "config.get('fundera')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/generali/config.ts",
+      "line": 5,
+      "column": 162,
+      "snippet": "config.get('generali')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/healthypaws/fetcher.ts",
+      "line": 93,
+      "column": 3251,
+      "snippet": "config.get('healthypaws')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/healthypaws/fetcher.ts",
+      "line": 126,
+      "column": 4193,
+      "snippet": "config.get('healthypaws')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/img/config.ts",
+      "line": 4,
+      "column": 98,
+      "snippet": "config.get('img')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/insurify/fetcher.ts",
+      "line": 23,
+      "column": 779,
+      "snippet": "config.get('insurify')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/insurify/fetcher.ts",
+      "line": 42,
+      "column": 1438,
+      "snippet": "config.get('insurify')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/ladder/fetcher.ts",
+      "line": 48,
+      "column": 1663,
+      "snippet": "config.get('ladderAPI')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/lemonade/config.ts",
+      "line": 5,
+      "column": 162,
+      "snippet": "config.get('lemonade')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/lemonade-leadcloud/config.ts",
+      "line": 6,
+      "column": 225,
+      "snippet": "config.get('lemonade-leadcloud')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/lemonade-quote/fetcher.ts",
+      "line": 41,
+      "column": 1501,
+      "snippet": "config.get('lemonade-quote')"
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/lemonade-quote/fetcher.ts",
+      "line": 120,
+      "column": 3914,
+      "snippet": "sendEvent({\n          logger: this.logger,\n          entityName: LEMONADE_EVENT_NAMES.PARTNER_SERVER,\n          action: LEMONADE_EVENT_ACTIONS.QUOTE_REQUEST,\n          payload: {\n            url: apiU..."
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/lemonade-quote/fetcher.ts",
+      "line": 172,
+      "column": 5833,
+      "snippet": "sendEvent({\n          logger: this.logger,\n          entityName: LEMONADE_EVENT_NAMES.PARTNER_SERVER,\n          action: LEMONADE_EVENT_ACTIONS.QUOTE_REQUEST,\n          payload: {\n            url: apiU..."
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/lemonade-quote/lemonade-payment-events.ts",
+      "line": 109,
+      "column": 3606,
+      "snippet": "sendEvent({\n      logger,\n      entityName: LEMONADE_EVENT_NAMES.PAYMENT_TOKEN,\n      action: LEMONADE_EVENT_ACTIONS.PAYMENT_TOKEN_SUBMISSION,\n      payload: eventPayload,\n      eventContext,\n    })"
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbol": "sendEvent",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/lemonade-quote/lemonade-payment-events.ts",
+      "line": 153,
+      "column": 5005,
+      "snippet": "sendEvent({\n      logger,\n      entityName: LEMONADE_EVENT_NAMES.SALE_SUBMISSION,\n      action: LEMONADE_EVENT_ACTIONS.SALE_SUBMISSION,\n      payload: eventPayload,\n      eventContext,\n    })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/lemonade-quote/lemonade-payment.service.ts",
+      "line": 41,
+      "column": 1455,
+      "snippet": "config.get(LEMONADE_PAYMENT_CONFIG_KEY)"
+    },
+    {
+      "category": "cache",
+      "package": "ni-cache",
+      "symbol": "cache",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/liberty-mutual/fetcher.ts",
+      "line": 23,
+      "column": 888,
+      "snippet": "cache(this.getApiToken.bind(this), { maxAge: OAUTH_TOKEN_CACHE_MAX_AGE, preFetch: 0.8 })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/liberty-mutual/fetcher.ts",
+      "line": 48,
+      "column": 1791,
+      "snippet": "config.get('libertyMutual')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/liberty-mutual/fetcher.ts",
+      "line": 73,
+      "column": 2560,
+      "snippet": "config.get('libertyMutual')"
+    },
+    {
+      "category": "cache",
+      "package": "ni-cache",
+      "symbol": "cache",
+      "method": "call",
+      "file": "../../packages/vendors/src/vendors/liberty-mutual-beacon/fetcher.ts",
+      "line": 23,
+      "column": 853,
+      "snippet": "cache(this.getAccessToken.bind(this), { maxAge: 1000 * 60 * 59, preFetch: 0.8 })"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/liberty-mutual-beacon/fetcher.ts",
+      "line": 28,
+      "column": 1058,
+      "snippet": "config.get('libertyMutualBeacon')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/liberty-mutual-beacon/fetcher.ts",
+      "line": 51,
+      "column": 1823,
+      "snippet": "config.get('libertyMutualBeacon')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/media-alpha/config.ts",
+      "line": 8,
+      "column": 322,
+      "snippet": "config.get('mediaAlpha')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/media-alpha/fetcher.ts",
+      "line": 27,
+      "column": 999,
+      "snippet": "config.get('mediaAlpha')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/media-alpha/fetcher.ts",
+      "line": 62,
+      "column": 2188,
+      "snippet": "config.get('mediaAlpha')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/metlife/fetcher.ts",
+      "line": 87,
+      "column": 3222,
+      "snippet": "config.get('metlife')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/metlife/fetcher.ts",
+      "line": 111,
+      "column": 3920,
+      "snippet": "config.get('metlife')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/metlife/payload.ts",
+      "line": 26,
+      "column": 889,
+      "snippet": "config.get('metlife')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/mortech/config.ts",
+      "line": 4,
+      "column": 102,
+      "snippet": "config.get('mortech')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/peddle/fetcher.ts",
+      "line": 48,
+      "column": 1437,
+      "snippet": "config.get('peddle')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/peddle/fetcher.ts",
+      "line": 79,
+      "column": 2566,
+      "snippet": "config.get('peddle')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/pets-best/fetcher.ts",
+      "line": 85,
+      "column": 2914,
+      "snippet": "config.get('petsBest')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/pets-best/fetcher.ts",
+      "line": 122,
+      "column": 4132,
+      "snippet": "config.get('petsBest')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/protect/config.ts",
+      "line": 6,
+      "column": 199,
+      "snippet": "config.get('protect')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/prudent-pet/config.ts",
+      "line": 4,
+      "column": 102,
+      "snippet": "config.get('prudentPet')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/pumpkin/fetcher.ts",
+      "line": 45,
+      "column": 1561,
+      "snippet": "config.get('pumpkin')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/pumpkin/fetcher.ts",
+      "line": 94,
+      "column": 3005,
+      "snippet": "config.get('pumpkin')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/pumpkin/result.ts",
+      "line": 174,
+      "column": 5574,
+      "snippet": "config.get('pumpkin')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/quin-street/fetcher.ts",
+      "line": 33,
+      "column": 1310,
+      "snippet": "config.get('quinStreet')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/quote-wizard/config.ts",
+      "line": 5,
+      "column": 165,
+      "snippet": "config.get('quoteWizard')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/simple-money-options/config.ts",
+      "line": 5,
+      "column": 172,
+      "snippet": "config.get('simpleMoneyOptions')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/spot/fetcher.ts",
+      "line": 110,
+      "column": 3672,
+      "snippet": "config.get('spot')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/spot/fetcher.ts",
+      "line": 136,
+      "column": 4324,
+      "snippet": "config.get('spot')"
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbol": "config",
+      "method": "get",
+      "file": "../../packages/vendors/src/vendors/spot/fetcher.ts",
+      "line": 159,
+      "column": 4965,
+      "snippet": "config.get('spot')"
+    },
+    {
+      "category": "cache",
+      "package": "ni-cache",
+      "symbol": "cache",
+      "method": "call",
+      "file": "../../packages/vendors/src/verticals/travel-insurance/utils.ts",
+      "line": 6,
+      "column": 203,
+      "snippet": "cache(\n  async () => {\n    const requestHelper = new RequestHelper();\n    return requestHelper.get(GEO_LOCATIONS_MAP_URL, {});\n  },\n  { maxAge: 1000 * 60 * 60 * 24 }\n)"
+    },
+    {
+      "category": "http",
+      "package": "ni-http",
+      "symbol": "requestHelper",
+      "method": "get",
+      "file": "../../packages/vendors/src/verticals/travel-insurance/utils.ts",
+      "line": 9,
+      "column": 284,
+      "snippet": "requestHelper.get(GEO_LOCATIONS_MAP_URL, {})",
+      "url": "GEO_LOCATIONS_MAP_URL",
+      "urlResolved": false
+    },
+    {
+      "category": "platform",
+      "package": "ni-chart-rt",
+      "symbol": "getProductData",
+      "method": "call",
+      "file": "lib/graphql/resolvers/attributes.ts",
+      "line": 115,
+      "column": 3113,
+      "snippet": "getProductData(\n      backwardCompatibleChartElement,\n      contextId\n    )"
+    },
+    {
+      "category": "platform",
+      "package": "ni-chart-rt",
+      "symbol": "updateChartProductAttributeData",
+      "method": "call",
+      "file": "lib/graphql/resolvers/attributes.ts",
+      "line": 126,
+      "column": 3622,
+      "snippet": "updateChartProductAttributeData(\n        backwardCompatibleChartElement,\n        prod,\n        featuresById,\n        featureValuesByProductId[prod.id.toString()],\n        productReviewsByProductId[pro..."
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/graphql/resolvers/attributes.ts",
+      "line": 141,
+      "column": 4084,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/graphql/resolvers/product-with-quote.ts",
+      "line": 46,
+      "column": 1425,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/graphql/resolvers/resolvers.ts",
+      "line": 696,
+      "column": 20451,
+      "snippet": "getModernContextLogger()"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/graphql/resolvers/resolvers.ts",
+      "line": 721,
+      "column": 21333,
+      "snippet": "getModernContextLogger(context.contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/graphql/resolvers/stripe-payment.ts",
+      "line": 32,
+      "column": 1132,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "vendors",
+      "package": "@ni-products/vendors",
+      "symbol": "sendLemonadeSaleSubmissionEvent",
+      "method": "call",
+      "file": "lib/graphql/resolvers/stripe-payment.ts",
+      "line": 122,
+      "column": 3813,
+      "snippet": "sendLemonadeSaleSubmissionEvent({\n      logger,\n      quoteId,\n      paymentData: {\n        quoteId,\n        cardTokenId,\n        termsAndConditionsAccepted,\n      },\n      response: paymentResult.pay..."
+    },
+    {
+      "category": "vendors",
+      "package": "@ni-products/vendors",
+      "symbol": "LEMONADE_STRIPE_PAYMENT_LOG_MESSAGES",
+      "method": "ERROR_PROCESSING_PAYMENT",
+      "file": "lib/graphql/resolvers/stripe-payment.ts",
+      "line": 160,
+      "column": 5095,
+      "snippet": "LEMONADE_STRIPE_PAYMENT_LOG_MESSAGES.ERROR_PROCESSING_PAYMENT(errorMessage)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/ActionHandler.ts",
+      "line": 37,
+      "column": 927,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/filter/long-list-zip-code.ts",
+      "line": 108,
+      "column": 3969,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/filter/min-bid-min-products.ts",
+      "line": 28,
+      "column": 1152,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/filter/product-feature.ts",
+      "line": 195,
+      "column": 6887,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-chart-rt",
+      "symbol": "evaluateTimes",
+      "method": "call",
+      "file": "lib/resolvers/actions/filter/working-hours.ts",
+      "line": 19,
+      "column": 677,
+      "snippet": "evaluateTimes(date, product.schedule)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/filter/working-hours.ts",
+      "line": 22,
+      "column": 786,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/filter/zip-code.ts",
+      "line": 67,
+      "column": 2478,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/filter/zip-code.ts",
+      "line": 98,
+      "column": 3630,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/merge/battle.ts",
+      "line": 47,
+      "column": 1770,
+      "snippet": "getModernContextLogger(get(options, 'contextId', undefined))"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/merge/join.ts",
+      "line": 39,
+      "column": 1395,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/merge/priority.ts",
+      "line": 46,
+      "column": 1338,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/sort/context-based-scoring.ts",
+      "line": 66,
+      "column": 2640,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/sort/product-feature.ts",
+      "line": 74,
+      "column": 2801,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/sort/rotation.ts",
+      "line": 176,
+      "column": 5482,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/sort/sort-by-api-feature.ts",
+      "line": 29,
+      "column": 1079,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbol": "getModernContextLogger",
+      "method": "call",
+      "file": "lib/resolvers/actions/sort/sort-by-objective-parameter.ts",
+      "line": 94,
+      "column": 3382,
+      "snippet": "getModernContextLogger(contextId)"
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbol": "manipulatorHelper",
+      "method": "init",
+      "file": "test/unit/resolvers/actions/filter/zip-code.spec.ts",
+      "line": 287,
+      "column": 7463,
+      "snippet": "manipulatorHelper.init(contextId, {\n      ui: [\n        {\n          type: 'ui',\n          id: '5922c47b99753300019c96b7',\n          data: { id: '5922c47b99753300019c96b7', name: 'ni-filter-localized-f..."
+    }
+  ],
+  "imports": [
+    {
+      "category": "platform",
+      "package": "ni-http-server",
+      "symbols": [
+        "AsyncBootstrap",
+        "notFoundMiddlewares"
+      ],
+      "files": [
+        "app.ts",
+        "lib/app-setups.ts"
+      ]
+    },
+    {
+      "category": "cache",
+      "package": "xsite-ni-shared-cache",
+      "symbols": [
+        "SharedCacheModule"
+      ],
+      "files": [
+        "../../packages/cache/src/cache.ts",
+        "../../packages/vendors/src/utils/cache/cache.ts",
+        "lib/services/product-list-service.ts"
+      ]
+    },
+    {
+      "category": "platform",
+      "package": "ni-node-configuration",
+      "symbols": [
+        "config"
+      ],
+      "files": [
+        "../../packages/cache/src/cache.ts",
+        "../../packages/cache/src/redis-client.ts",
+        "../../packages/utils/src/kinesis/kinesis.ts",
+        "../../packages/vendors/src/pet-insurance/pet-insurance-utils.ts",
+        "../../packages/vendors/src/vendors-handler.ts",
+        "../../packages/vendors/src/vendors/abstract-fetcher.ts",
+        "../../packages/vendors/src/vendors/aspca/fetcher.ts",
+        "../../packages/vendors/src/vendors/aspca/result.ts",
+        "../../packages/vendors/src/vendors/cash-for-cars/fetcher.ts",
+        "../../packages/vendors/src/vendors/deposit-account/fetcher.ts",
+        "../../packages/vendors/src/vendors/embrace/fetcher.ts",
+        "../../packages/vendors/src/vendors/ethos/fetcher.ts",
+        "../../packages/vendors/src/vendors/even/config.ts",
+        "../../packages/vendors/src/vendors/faye/fetcher.ts",
+        "../../packages/vendors/src/vendors/fetch/fetcher.ts",
+        "../../packages/vendors/src/vendors/fetch/result.ts",
+        "../../packages/vendors/src/vendors/figo/fetcher.ts",
+        "../../packages/vendors/src/vendors/figure/config.ts",
+        "../../packages/vendors/src/vendors/fundera/config.ts",
+        "../../packages/vendors/src/vendors/generali/config.ts",
+        "../../packages/vendors/src/vendors/healthypaws/fetcher.ts",
+        "../../packages/vendors/src/vendors/img/config.ts",
+        "../../packages/vendors/src/vendors/insurify/fetcher.ts",
+        "../../packages/vendors/src/vendors/ladder/fetcher.ts",
+        "../../packages/vendors/src/vendors/lemonade-leadcloud/config.ts",
+        "../../packages/vendors/src/vendors/lemonade-quote/fetcher.ts",
+        "../../packages/vendors/src/vendors/lemonade-quote/lemonade-payment.service.ts",
+        "../../packages/vendors/src/vendors/lemonade/config.ts",
+        "../../packages/vendors/src/vendors/liberty-mutual-beacon/fetcher.ts",
+        "../../packages/vendors/src/vendors/liberty-mutual/fetcher.ts",
+        "../../packages/vendors/src/vendors/media-alpha/config.ts",
+        "../../packages/vendors/src/vendors/media-alpha/fetcher.ts",
+        "../../packages/vendors/src/vendors/metlife/fetcher.ts",
+        "../../packages/vendors/src/vendors/metlife/payload.ts",
+        "../../packages/vendors/src/vendors/mortech/config.ts",
+        "../../packages/vendors/src/vendors/peddle/fetcher.ts",
+        "../../packages/vendors/src/vendors/pets-best/fetcher.ts",
+        "../../packages/vendors/src/vendors/protect/config.ts",
+        "../../packages/vendors/src/vendors/prudent-pet/config.ts",
+        "../../packages/vendors/src/vendors/pumpkin/fetcher.ts",
+        "../../packages/vendors/src/vendors/pumpkin/result.ts",
+        "../../packages/vendors/src/vendors/quin-street/fetcher.ts",
+        "../../packages/vendors/src/vendors/quote-wizard/config.ts",
+        "../../packages/vendors/src/vendors/simple-money-options/config.ts",
+        "../../packages/vendors/src/vendors/spot/fetcher.ts",
+        "lib/controllers/graphql.ts",
+        "lib/resolvers/product-list-resolver.ts",
+        "lib/services/product-list-service.ts",
+        "test/unit/services/product-list-service.spec.ts"
+      ]
+    },
+    {
+      "category": "http",
+      "package": "ni-http",
+      "symbols": [
+        "RequestHeaders",
+        "RequestHelper",
+        "RequestOptions"
+      ],
+      "files": [
+        "../../packages/vendors/src/pet-insurance/pet-insurance-utils.ts",
+        "../../packages/vendors/src/services/vendor-api.service.ts",
+        "../../packages/vendors/src/types.ts",
+        "../../packages/vendors/src/verticals/travel-insurance/utils.ts",
+        "lib/repositories/product-score-repository.ts",
+        "lib/repositories/product-unified-score-repository.ts"
+      ]
+    },
+    {
+      "category": "database",
+      "package": "ni-entities",
+      "symbols": [
+        "entities",
+        "niEntities"
+      ],
+      "files": [
+        "lib/controllers/servicecheck-controller.ts",
+        "lib/graphql/schema/product-schema.ts",
+        "lib/register-schemas.ts",
+        "lib/repositories/auto-bid-repository.ts",
+        "lib/repositories/integration-config-repository.ts",
+        "lib/repositories/link-contexts-repository.ts",
+        "lib/repositories/links-repository.ts",
+        "lib/repositories/long-list-filtering-repository.ts",
+        "lib/repositories/master-products-repository.ts",
+        "lib/repositories/position-attributes-repository.ts",
+        "lib/repositories/product-feature-repository.ts",
+        "lib/repositories/product-feature-value-groups-repository.ts",
+        "lib/repositories/product-feature-values-repository.ts",
+        "lib/repositories/product-list-compositions-repository.ts",
+        "lib/repositories/products-repository.ts",
+        "lib/repositories/segments-repository.ts",
+        "lib/repositories/vertical-repository.ts"
+      ]
+    },
+    {
+      "category": "database",
+      "package": "ni-core-entities-provider-rt",
+      "symbols": [
+        "connectionHelper"
+      ],
+      "files": [
+        "lib/register-schemas.ts",
+        "lib/repositories/auto-bid-repository.ts",
+        "lib/repositories/integration-config-repository.ts",
+        "lib/repositories/link-contexts-repository.ts",
+        "lib/repositories/links-repository.ts",
+        "lib/repositories/long-list-filtering-repository.ts",
+        "lib/repositories/master-products-repository.ts",
+        "lib/repositories/position-attributes-repository.ts",
+        "lib/repositories/product-feature-repository.ts",
+        "lib/repositories/product-feature-value-groups-repository.ts",
+        "lib/repositories/product-feature-values-repository.ts",
+        "lib/repositories/product-list-compositions-repository.ts",
+        "lib/repositories/products-repository.ts",
+        "lib/repositories/segments-repository.ts",
+        "lib/repositories/vertical-repository.ts"
+      ]
+    },
+    {
+      "category": "cache",
+      "package": "ni-cache",
+      "symbols": [
+        "cache",
+        "entityCache"
+      ],
+      "files": [
+        "../../packages/vendors/src/pet-insurance/pet-insurance-utils.ts",
+        "../../packages/vendors/src/vendors/ethos/fetcher.ts",
+        "../../packages/vendors/src/vendors/fetch/fetcher.ts",
+        "../../packages/vendors/src/vendors/liberty-mutual-beacon/fetcher.ts",
+        "../../packages/vendors/src/vendors/liberty-mutual/fetcher.ts",
+        "../../packages/vendors/src/verticals/travel-insurance/utils.ts",
+        "lib/repositories/auto-bid-repository.ts",
+        "lib/repositories/links-repository.ts",
+        "lib/repositories/master-products-repository.ts",
+        "lib/repositories/position-attributes-repository.ts",
+        "lib/repositories/product-feature-repository.ts",
+        "lib/repositories/product-feature-value-groups-repository.ts",
+        "lib/repositories/product-feature-values-repository.ts",
+        "lib/repositories/product-list-compositions-repository.ts",
+        "lib/repositories/product-unified-score-repository.ts",
+        "lib/repositories/products-repository.ts",
+        "lib/repositories/segments-repository.ts",
+        "lib/repositories/vertical-repository.ts",
+        "test/unit/repositories/links-repository.spec.ts",
+        "test/unit/repositories/master-products-repository.spec.ts",
+        "test/unit/repositories/position-attributes-repository.spec.ts",
+        "test/unit/repositories/product-list-compositions-repository.spec.ts",
+        "test/unit/repositories/products-repository.spec.ts"
+      ]
+    },
+    {
+      "category": "http",
+      "package": "axios",
+      "symbols": [
+        "axios"
+      ],
+      "files": [
+        "../../packages/vendors/src/pet-insurance/pet-insurance-utils.ts"
+      ]
+    },
+    {
+      "category": "events",
+      "package": "@products-monorepo/utils",
+      "symbols": [
+        "EventContext",
+        "productsMonorepoUtils",
+        "sendEvent"
+      ],
+      "files": [
+        "../../packages/vendors/src/utils/event-context-helpers.ts",
+        "../../packages/vendors/src/vendors/abstract-fetcher.ts",
+        "../../packages/vendors/src/vendors/abstract-result.ts",
+        "../../packages/vendors/src/vendors/lemonade-quote/fetcher.ts",
+        "../../packages/vendors/src/vendors/lemonade-quote/lemonade-payment-events.ts",
+        "../../packages/vendors/src/vendors/lemonade-quote/lemonade-payment.service.ts",
+        "../../packages/vendors/src/vendors/lemonade-quote/payment-error-handler.ts",
+        "../../packages/vendors/src/vendors/utils.ts",
+        "lib/helpers/battle-events.ts",
+        "lib/helpers/payment-events.ts",
+        "lib/helpers/stripe-events.ts",
+        "test/unit/resolvers/stripe-payment.spec.ts"
+      ]
+    },
+    {
+      "category": "platform",
+      "package": "ni-feature-entity-provider-rt",
+      "symbols": [
+        "entityProvider",
+        "productFeaturesService"
+      ],
+      "files": [
+        "../../packages/vendors/src/utils/vendor-slots.ts",
+        "lib/services/product-feature-value-service.ts"
+      ]
+    },
+    {
+      "category": "platform",
+      "package": "ni-rts-helper",
+      "symbols": [
+        "contextHelper",
+        "generateAffiliateLink",
+        "hashHelper",
+        "niRtsHelper",
+        "rts",
+        "vendorBattleStrategies"
+      ],
+      "files": [
+        "lib/controllers/graphql.ts",
+        "lib/controllers/product-controller.ts",
+        "lib/controllers/product-links-controller.ts",
+        "lib/controllers/product-lists-controller.ts",
+        "lib/controllers/vendor-products-controller.ts",
+        "lib/repositories/long-list-filtering-repository.ts",
+        "lib/repositories/master-products-repository.ts",
+        "lib/repositories/product-score-repository.ts",
+        "lib/repositories/products-repository.ts",
+        "lib/resolvers/actions/ActionHandler.ts",
+        "lib/resolvers/actions/filter/long-list-zip-code.ts",
+        "lib/resolvers/actions/filter/min-bid-min-products.ts",
+        "lib/resolvers/actions/filter/product-feature.ts",
+        "lib/resolvers/actions/filter/zip-code.ts",
+        "lib/resolvers/actions/merge/battle.ts",
+        "lib/resolvers/actions/merge/join.ts",
+        "lib/resolvers/actions/sort/context-based-scoring.ts",
+        "lib/resolvers/actions/sort/product-feature.ts",
+        "lib/resolvers/actions/sort/rotation.ts",
+        "lib/resolvers/actions/sort/sort-by-api-feature.ts",
+        "lib/resolvers/actions/sort/sort-by-objective-parameter.ts",
+        "lib/resolvers/product-link-resolver.ts",
+        "lib/resolvers/product-list-resolver.ts",
+        "lib/services/product-feature-value-service.ts",
+        "lib/services/product-link-service.ts",
+        "lib/services/product-service.ts"
+      ]
+    },
+    {
+      "category": "database",
+      "package": "xsite-data-access-mongo",
+      "symbols": [
+        "mongodbHelper",
+        "mongoose"
+      ],
+      "files": [
+        "lib/controllers/servicecheck-controller.ts",
+        "lib/services/product-feature-value-service.ts",
+        "test/unit/repositories/link-contexts-repository.spec.ts",
+        "test/unit/repositories/links-repository.spec.ts",
+        "test/unit/repositories/long-list-filtering-repository.spec.ts",
+        "test/unit/repositories/master-products-repository.spec.ts",
+        "test/unit/repositories/position-attributes-repository.spec.ts",
+        "test/unit/repositories/product-feature-repository.spec.ts",
+        "test/unit/repositories/product-feature-value-groups-repository.spec.ts",
+        "test/unit/repositories/product-feature-values-repository.spec.ts",
+        "test/unit/repositories/product-list-compositions-repository.spec.ts",
+        "test/unit/repositories/products-repository.spec.ts",
+        "test/unit/repositories/segments-repository.spec.ts",
+        "test/unit/repositories/vertical-repository.spec.ts"
+      ]
+    },
+    {
+      "category": "platform",
+      "package": "xsite-modern-context",
+      "symbols": [
+        "getModernContextLogger",
+        "xsiteModernContext"
+      ],
+      "files": [
+        "lib/graphql/resolvers/attributes.ts",
+        "lib/graphql/resolvers/product-with-quote.ts",
+        "lib/graphql/resolvers/resolvers.ts",
+        "lib/graphql/resolvers/stripe-payment.ts",
+        "lib/helpers/battle-events.ts",
+        "lib/repositories/master-products-repository.ts",
+        "lib/repositories/product-feature-repository.ts",
+        "lib/repositories/product-feature-value-groups-repository.ts",
+        "lib/repositories/product-feature-values-repository.ts",
+        "lib/repositories/product-score-repository.ts",
+        "lib/repositories/product-unified-score-repository.ts",
+        "lib/repositories/products-repository.ts",
+        "lib/resolvers/actions/ActionHandler.ts",
+        "lib/resolvers/actions/filter/long-list-zip-code.ts",
+        "lib/resolvers/actions/filter/min-bid-min-products.ts",
+        "lib/resolvers/actions/filter/product-feature.ts",
+        "lib/resolvers/actions/filter/working-hours.ts",
+        "lib/resolvers/actions/filter/zip-code.ts",
+        "lib/resolvers/actions/merge/battle.ts",
+        "lib/resolvers/actions/merge/join.ts",
+        "lib/resolvers/actions/merge/priority.ts",
+        "lib/resolvers/actions/sort/context-based-scoring.ts",
+        "lib/resolvers/actions/sort/product-feature.ts",
+        "lib/resolvers/actions/sort/rotation.ts",
+        "lib/resolvers/actions/sort/sort-by-api-feature.ts",
+        "lib/resolvers/actions/sort/sort-by-objective-parameter.ts",
+        "lib/resolvers/product-feature-value-resolver.ts",
+        "lib/resolvers/product-link-resolver.ts",
+        "lib/resolvers/product-list-resolver.ts",
+        "lib/services/integration-config.service.ts",
+        "lib/services/product-feature-value-service.ts",
+        "lib/services/product-link-service.ts",
+        "lib/services/product-list-service.ts",
+        "lib/services/product-scores-service.ts",
+        "lib/services/product-service.ts",
+        "test/unit/resolvers/actions/sort/sort-by-api-feature.spec.ts",
+        "test/unit/resolvers/stripe-payment.spec.ts"
+      ]
+    },
+    {
+      "category": "platform",
+      "package": "ni-chart-rt",
+      "symbols": [
+        "evaluateTimes",
+        "getProductData",
+        "isPhoneScheduled",
+        "updateChartProductAttributeData"
+      ],
+      "files": [
+        "lib/graphql/resolvers/attributes.ts",
+        "lib/helpers/phone-number-adapter.ts",
+        "lib/resolvers/actions/filter/working-hours.ts",
+        "lib/resolvers/product-link-resolver.ts"
+      ]
+    },
+    {
+      "category": "platform",
+      "package": "ni-feature-toggle",
+      "symbols": [
+        "FeatureToggleList"
+      ],
+      "files": [
+        "../../packages/vendors/src/vendors/insurify/result.ts",
+        "../../packages/vendors/src/vendors/media-alpha/fetcher.ts",
+        "../../packages/vendors/src/vendors/quin-street/fetcher.ts",
+        "../../packages/vendors/src/vendors/quote-wizard/payload-builders/base-payload-builder.ts",
+        "../../packages/vendors/src/vendors/spot/utils.ts",
+        "lib/helpers/product-list-caching-helper.ts",
+        "lib/resolvers/actions/filter/zip-code.ts",
+        "lib/resolvers/product-list-resolver.ts"
+      ]
+    },
+    {
+      "category": "vendors",
+      "package": "@ni-products/vendors",
+      "symbols": [
+        "LEMONADE_STRIPE_PAYMENT_LOG_MESSAGES",
+        "LEMONADE_VENDOR_API",
+        "Logger",
+        "PAYMENT_ERROR_MESSAGES",
+        "RawOptions",
+        "VendorsHandler",
+        "VendorsModule",
+        "sendLemonadeSaleSubmissionEvent"
+      ],
+      "files": [
+        "lib/graphql/resolvers/product-with-quote.ts",
+        "lib/graphql/resolvers/stripe-payment.ts",
+        "lib/helpers/s2s-sale-postback.ts",
+        "lib/helpers/stripe-events.ts",
+        "lib/helpers/stripe-payment-helpers.ts",
+        "lib/resolvers/product-list-resolver.ts",
+        "lib/services/vendor-products-service.ts",
+        "test/unit/resolvers/stripe-payment.spec.ts"
+      ]
+    },
+    {
+      "category": "discovery",
+      "package": "ni-discovery-service",
+      "symbols": [
+        "niDiscoveryService"
+      ],
+      "files": [
+        "lib/repositories/product-score-repository.ts",
+        "lib/repositories/product-unified-score-repository.ts"
+      ]
+    },
+    {
+      "category": "platform",
+      "package": "ni-manipulator",
+      "symbols": [
+        "manipulatorHelper"
+      ],
+      "files": [
+        "lib/resolvers/actions/additionalActionsGenerator.ts",
+        "lib/resolvers/actions/filter/manipulation.ts",
+        "lib/resolvers/product-feature-value-resolver.ts",
+        "lib/resolvers/product-link-resolver.ts",
+        "lib/resolvers/product-list-resolver.ts",
+        "lib/services/product-feature-value-service.ts",
+        "lib/services/product-service.ts",
+        "test/unit/resolvers/actions/filter/zip-code.spec.ts"
+      ]
+    },
+    {
+      "category": "platform",
+      "package": "ni-service-contracts",
+      "symbols": [
+        "ServiceResult"
+      ],
+      "files": [
+        "lib/services/product-link-service.ts",
+        "lib/services/product-list-service.ts",
+        "lib/services/product-service.ts",
+        "lib/services/vendor-products-service.ts"
+      ]
+    }
+  ]
+}

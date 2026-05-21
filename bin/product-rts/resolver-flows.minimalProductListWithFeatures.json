@@ -1,0 +1,521 @@
+{
+  "generatedAt": "2026-04-08T13:19:29.390Z",
+  "resolversCount": 1,
+  "resolvers": [
+    {
+      "generatedAt": "2026-04-08T13:19:28.774Z",
+      "resolver": {
+        "name": "minimalProductListWithFeatures",
+        "parentType": "Query",
+        "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+        "line": 650
+      },
+      "summary": {
+        "functions": 21,
+        "externalPackages": 26,
+        "apiRequests": 0,
+        "databaseCalls": 2,
+        "classInstantiations": 1
+      },
+      "functions": [
+        {
+          "order": 0,
+          "name": "getMinimalProductListWithFeatures",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+          "line": 517,
+          "lineEnd": 543,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+            "line": 657
+          }
+        },
+        {
+          "order": 2,
+          "name": "getMinimalProductList",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-list-service.ts",
+          "line": 346,
+          "lineEnd": 395,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+            "line": 529
+          }
+        },
+        {
+          "order": 3,
+          "name": "getProductFeatureValuesByProductAndFeatureIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 200,
+          "lineEnd": 239,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-list-service.ts",
+            "line": 367
+          }
+        },
+        {
+          "order": 4,
+          "name": "extractRequestedGroupsVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 241,
+          "lineEnd": 256,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 207
+          }
+        },
+        {
+          "order": 5,
+          "name": "getValueGroupVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 113,
+          "lineEnd": 130,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 208
+          }
+        },
+        {
+          "order": 7,
+          "name": "getProductFeatureValueGroupsByProductFeatureIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 27,
+          "lineEnd": 54,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 119
+          }
+        },
+        {
+          "order": 8,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 21,
+          "lineEnd": 25,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+            "line": 31
+          }
+        },
+        {
+          "order": 13,
+          "name": "getProductFeatureValueGroupVariants",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 68,
+          "lineEnd": 91,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 121
+          }
+        },
+        {
+          "order": 15,
+          "name": "getRequestedProductFeatureValueGroupsVariants",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 93,
+          "lineEnd": 111,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 77
+          }
+        },
+        {
+          "order": 17,
+          "name": "getManipulatedProductFeatureGroupVariants",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 37,
+          "lineEnd": 66,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 81
+          }
+        },
+        {
+          "order": 19,
+          "name": "isManipulatedVariantGroupVariant",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 30,
+          "lineEnd": 35,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 51
+          }
+        },
+        {
+          "order": 25,
+          "name": "getProductFeatureOverrideValuesQuery",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 132,
+          "lineEnd": 168,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 216
+          }
+        },
+        {
+          "order": 26,
+          "name": "isObjectNotEmpty",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 170,
+          "lineEnd": 172,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 140
+          }
+        },
+        {
+          "order": 27,
+          "name": "isObjectNotEmpty",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 170,
+          "lineEnd": 172,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 141
+          }
+        },
+        {
+          "order": 32,
+          "name": "getProductFeatureValuesByIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 67,
+          "lineEnd": 92,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 223
+          }
+        },
+        {
+          "order": 33,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 26,
+          "lineEnd": 30,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+            "line": 71
+          }
+        },
+        {
+          "order": 38,
+          "name": "getProductFeatureValuesByProductIdsAndValueGroupVarIds",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 32,
+          "lineEnd": 65,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 224
+          }
+        },
+        {
+          "order": 39,
+          "name": "getModel",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 26,
+          "lineEnd": 30,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+            "line": 37
+          }
+        },
+        {
+          "order": 42,
+          "name": "applyProductFeatureValuesOverrides",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 176,
+          "lineEnd": 198,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 227
+          }
+        },
+        {
+          "order": 43,
+          "name": "generateOverrideMapKey",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 174,
+          "lineEnd": 174,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 187
+          }
+        },
+        {
+          "order": 44,
+          "name": "generateOverrideMapKey",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 174,
+          "lineEnd": 174,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+            "line": 191
+          }
+        }
+      ],
+      "externalPackages": [
+        {
+          "order": 1,
+          "package": "unknown",
+          "symbol": "context",
+          "method": "get",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+          "line": 527,
+          "snippet": "context.modernContextAndLogger?.context?.get?.()"
+        },
+        {
+          "order": 6,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "getProductFeatureManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 118,
+          "snippet": "manipulatorHelper.getProductFeatureManipulation(contextId, productFeatureIds)"
+        },
+        {
+          "order": 9,
+          "package": "unknown",
+          "symbol": "connectionHelper\n    ",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 22,
+          "snippet": "connectionHelper\n    .connectionShim(true)"
+        },
+        {
+          "order": 11,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 41,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 12,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 42,
+          "snippet": "logger.error(\n        `getProductFeatureValueGroupsByProductFeatureIds - Failed retrieving produc..."
+        },
+        {
+          "order": 14,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "groupBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 76,
+          "snippet": "groupBy(productFeatureValueGroups, 'varType')"
+        },
+        {
+          "order": 16,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 101,
+          "snippet": "keyBy(productFeatureValueGroups, 'varId')"
+        },
+        {
+          "order": 18,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 42,
+          "snippet": "keyBy(manipulators, 'data.productFeatureId')"
+        },
+        {
+          "order": 20,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "markManipulationAsUsed",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 62,
+          "snippet": "manipulatorHelper.markManipulationAsUsed({ ...productFeatureManipulation, manipulators: appliedMa..."
+        },
+        {
+          "order": 21,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 87,
+          "snippet": "keyBy(defaultProductFeatureValueGroupVariants, 'productFeatureId')"
+        },
+        {
+          "order": 22,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 88,
+          "snippet": "keyBy(requestedProductFeatureValueGroupsVariants, 'productFeatureId')"
+        },
+        {
+          "order": 23,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "keyBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 89,
+          "snippet": "keyBy(manipulatedProductFeatureGroupVariants, 'productFeatureId')"
+        },
+        {
+          "order": 24,
+          "package": "ni-manipulator",
+          "symbol": "manipulatorHelper",
+          "method": "getProductFeatureValueOverrideManipulation",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 210,
+          "snippet": "manipulatorHelper.getProductFeatureValueOverrideManipulation(\n      contextId,\n      productIds,\n..."
+        },
+        {
+          "order": 28,
+          "package": "typescript",
+          "symbol": "resolvedIdsSet",
+          "method": "has",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "resolvedIdsSet.has(key)"
+        },
+        {
+          "order": 29,
+          "package": "xsite-ni-shared-cache",
+          "symbol": "ObjectId",
+          "method": "isValid",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/node_modules/xsite-ni-shared-cache/node_modules/bson/bson.d.ts",
+          "line": 1439,
+          "snippet": "ObjectId.isValid(valueId)"
+        },
+        {
+          "order": 34,
+          "package": "unknown",
+          "symbol": "connectionHelper\n    ",
+          "method": "connectionShim",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 27,
+          "snippet": "connectionHelper\n    .connectionShim()"
+        },
+        {
+          "order": 36,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 78,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 37,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "warn",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 79,
+          "snippet": "logger.warn(\n        `getProductFeatureValuesByIds - Failed retrieving productFeatureValues with ..."
+        },
+        {
+          "order": 40,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 47,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 41,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "warn",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 48,
+          "snippet": "logger.warn(\n          `getProductFeatureValuesByProductIdsAndValueGroupVarIds - Failed retrievin..."
+        },
+        {
+          "order": 45,
+          "package": "typescript",
+          "symbol": "overrideMap",
+          "method": "has",
+          "file": "/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+          "line": 2,
+          "snippet": "overrideMap.has(overrideKey)"
+        },
+        {
+          "order": 47,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 229,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 48,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-feature-value-service.ts",
+          "line": 230,
+          "snippet": "logger.error(\n      `getProductFeatureValuesByProductAndFeatureIds - Failed retrieving productFea..."
+        },
+        {
+          "order": 49,
+          "package": "lodash",
+          "symbol": "unknown",
+          "method": "groupBy",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-list-service.ts",
+          "line": 374,
+          "snippet": "groupBy(productFeatureValues, 'productId')"
+        },
+        {
+          "order": 50,
+          "package": "ni-service-contracts",
+          "symbol": "ServiceResult",
+          "method": "getSuccessResult",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-list-service.ts",
+          "line": 389,
+          "snippet": "ServiceResult.getSuccessResult('Model data retrieved successfully', result)"
+        },
+        {
+          "order": 51,
+          "package": "unknown",
+          "symbol": "response",
+          "method": "setAsError",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-list-service.ts",
+          "line": 393,
+          "snippet": "response.setAsError(coreConstants.errorCodes.resource_not_found, [], null, message)"
+        }
+      ],
+      "apiRequests": [],
+      "databaseCalls": [
+        {
+          "order": 10,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-value-groups-repository.ts",
+          "line": 24,
+          "snippet": "connection.model(entities.constants.singular.rt.productFeatureValueGroup)"
+        },
+        {
+          "order": 35,
+          "package": "connection",
+          "symbol": "connection",
+          "method": "model",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/repositories/product-feature-values-repository.ts",
+          "line": 29,
+          "snippet": "connection.model(entities.constants.singular.rt.productFeatureValue)"
+        }
+      ],
+      "classInstantiations": [
+        {
+          "order": 52,
+          "className": "ServiceResult",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-list-service.ts",
+          "line": 351,
+          "definitionFile": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/services/product-list-service.ts"
+        }
+      ]
+    }
+  ]
+}

@@ -5,7 +5,6 @@ export interface Config {
     entrypoint: string;
   },
   exitPoints: {
-    ignorePatterns?: string[];
     categories: Record<string, string[]>;
   },
   flowTracer: {

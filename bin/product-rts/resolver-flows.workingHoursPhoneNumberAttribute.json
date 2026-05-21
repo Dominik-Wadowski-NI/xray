@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-04-08T13:19:29.391Z",
+  "resolversCount": 1,
+  "resolvers": [
+    {
+      "generatedAt": "2026-04-08T13:19:29.231Z",
+      "resolver": {
+        "name": "workingHoursPhoneNumberAttribute",
+        "parentType": "Product",
+        "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+        "line": 795
+      },
+      "summary": {
+        "functions": 2,
+        "externalPackages": 3,
+        "apiRequests": 0,
+        "databaseCalls": 0,
+        "classInstantiations": 0
+      },
+      "functions": [
+        {
+          "order": 0,
+          "name": "shouldShowPhone",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 373,
+          "lineEnd": 383,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/graphql/resolvers/resolvers.ts",
+            "line": 799
+          }
+        },
+        {
+          "order": 1,
+          "name": "isProductInWorkingHours",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 385,
+          "lineEnd": 399,
+          "calledFrom": {
+            "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+            "line": 382
+          }
+        }
+      ],
+      "externalPackages": [
+        {
+          "order": 2,
+          "package": "ni-chart-rt",
+          "symbol": "unknown",
+          "method": "evaluateTimes",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 389,
+          "snippet": "evaluateTimes(date, product.schedule)"
+        },
+        {
+          "order": 3,
+          "package": "xsite-modern-context",
+          "symbol": "unknown",
+          "method": "getModernContextLogger",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 392,
+          "snippet": "getModernContextLogger(contextId)"
+        },
+        {
+          "order": 4,
+          "package": "unknown",
+          "symbol": "logger",
+          "method": "error",
+          "file": "/Users/dominikwadowski/ni/services/products-monorepo/services/product-rts/lib/resolvers/product-link-resolver.ts",
+          "line": 393,
+          "snippet": "logger.error(\n      `productByWorkingHours - got error on product: productId = ${product.id}; pro..."
+        }
+      ],
+      "apiRequests": [],
+      "databaseCalls": [],
+      "classInstantiations": []
+    }
+  ]
+}
