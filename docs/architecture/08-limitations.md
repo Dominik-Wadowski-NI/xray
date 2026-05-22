@@ -33,4 +33,4 @@
 **Document Version:** 1.0  
 **Last Reviewed:** May 2026  
 
-See [06-challenges.md](./06-challenges.md) for technical challenges and solutions.
+See [07-challenges.md](./07-challenges.md) for technical challenges and solutions.

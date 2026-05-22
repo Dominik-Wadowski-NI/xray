@@ -51,4 +51,4 @@
 
 ---
 
-See [01-architecture.md](./01-architecture.md) for architectural context and [02-components.md](./02-components.md) for how these technologies are used.
+See [02-architecture.md](./02-architecture.md) for architectural context and [03-components.md](./03-components.md) for how these technologies are used.

@@ -66,4 +66,4 @@ import { fetchUser } from './api';   // fetchUser → relative import in ./api.t
 
 ---
 
-See [07-limitations.md](./07-limitations.md) for known limitations and future work.
+See [08-limitations.md](./08-limitations.md) for known limitations and future work.

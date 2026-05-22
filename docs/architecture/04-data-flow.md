@@ -156,4 +156,4 @@ Ready for visualization and architecture analysis
 
 ---
 
-See [04-data-models.md](./04-data-models.md) for the complete schemas of all output artifacts.
+See [05-data-models.md](./05-data-models.md) for the complete schemas of all output artifacts.

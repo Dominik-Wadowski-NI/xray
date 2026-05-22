@@ -331,4 +331,4 @@ Comprehensive system skeleton showing service and package dependencies enriched 
 
 ---
 
-See [02-components.md](./02-components.md) for component descriptions and [03-data-flow.md](./03-data-flow.md) for pipeline implementations that produce these artifacts.
+See [03-components.md](./03-components.md) for component descriptions and [04-data-flow.md](./04-data-flow.md) for pipeline implementations that produce these artifacts.

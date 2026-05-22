@@ -58,4 +58,4 @@ Each layer produces artifacts that feed into downstream layers and consumer appl
 
 ---
 
-See [02-components.md](./02-components.md) for detailed component design and [03-data-flow.md](./03-data-flow.md) for pipeline implementations.
+See [03-components.md](./03-components.md) for detailed component design and [04-data-flow.md](./04-data-flow.md) for pipeline implementations.
